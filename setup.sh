@@ -1,8 +1,8 @@
 #!/bin/sh
 VENV_DIR=$HOME/.local/share/nvim/venv
 
-virtualenv --python=python3 --prompt='(neovim) ' $VENV_DIR
-source $VENV_DIR/bin/activate
+virtualenv --python="$VIRTUAL_ENV/bin/python3" --prompt='(neovim) ' $VENV_DIR
+. $VENV_DIR/bin/activate
 $VENV_DIR/bin/pip3 install\
     appdirs\
     astroid\
