@@ -1,0 +1,65 @@
+priority -40
+
+snippet art "Article class"
+\\documentclass{article}
+
+$1
+
+\\begin{document}
+\title{$2}
+\author{${3:Aamr \\textsc{El Kazdadi}}}
+\date{$4}
+${5:\maketitle}
+
+$0
+\\end{document}
+endsnippet
+
+snippet ams "AMS packages"
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+endsnippet
+
+snippet set "Set brackets"
+\\{$1\\} $0
+endsnippet
+
+snippet .. "Dots" iA
+\dots
+endsnippet
+
+snippet ** "Superscript star" iA
+^{\star}
+endsnippet
+
+snippet T "Transpose" i
+^{\top}
+endsnippet
+
+snippet sum "Sum" i
+\\sum_{${1:i}=${2:1}}^{${3:n}} $0
+endsnippet
+
+snippet int "Integral" i
+\\int_{${1:a}}^{${2:b}} $3 \,\mathrm{d}${4:x} $0
+endsnippet
+
+snippet "b(egin)?" "begin{} / end{}" br
+\begin{${1}}
+	${0:${VISUAL}}
+\end{$1}
+endsnippet
+
+snippet pac "Use package" b
+\usepackage{$1}
+endsnippet
+
+snippet up "Use package" b
+\usepackage{$1}
+endsnippet
+
+snippet upp "Use package with options" b
+\usepackage[$2]{$1}
+endsnippet
