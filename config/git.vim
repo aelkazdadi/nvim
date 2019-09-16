@@ -1,33 +1,33 @@
 " Signify mappings
 nmap ]g <plug>(signify-next-hunk)
 nmap [g <plug>(signify-prev-hunk)
-nmap ]G 9999]g
-nmap [G 9999[g
+nnoremap ]G 9999]g
+nnoremap [G 9999[g
 
-nmap <leader>gr :Gread<cr>
-nmap <leader>gg :Gwrite<cr>
-nmap <leader>ghh <plug>GitGutterStageHunk
-nmap <leader>ghr <plug>GitGutterUndoHunk
-nmap <Leader>ghp <Plug>GitGutterPreviewHunk
+nnoremap <leader>gr :Gread<cr>
+nnoremap <leader>gg :Gwrite<cr>
+nnoremap <leader>ghh <plug>GitGutterStageHunk
+nnoremap <leader>ghr <plug>GitGutterUndoHunk
+nnoremap <Leader>ghp <Plug>GitGutterPreviewHunk
 
-nmap <leader>g-h :Gdiff HEAD<cr>
-nmap <leader>g-- :Gdiff<cr>
+nnoremap <leader>g-h :Gdiff HEAD<cr>
+nnoremap <leader>g-- :Gdiff<cr>
 
-nmap <leader>gee :Gedit<cr>
-nmap <leader>gev :Gvsplit<cr>
-nmap <leader>ges :Gsplit<cr>
-nmap <leader>get :Gtabedit<cr>
+nnoremap <leader>gee :Gedit<cr>
+nnoremap <leader>gev :Gvsplit<cr>
+nnoremap <leader>ges :Gsplit<cr>
+nnoremap <leader>get :Gtabedit<cr>
 
-nmap <leader>gd :Gdelete<cr>
-nmap <leader>gm :Gmove ./
+nnoremap <leader>gd :Gdelete<cr>
+nnoremap <leader>gm :Gmove ./
 
-nmap <leader>gs :Git<cr>
-nmap <leader>g<cr> :Gcommit<cr>
+nnoremap <leader>gs :Git<cr>
+nnoremap <leader>g<cr> :Gcommit<cr>
 
-nmap <leader>gpp :Gpush<cr>
-nmap <leader>gpl :Gpull<cr>
+nnoremap <leader>gpp :Gpush<cr>
+nnoremap <leader>gpl :Gpull<cr>
 
-nmap <leader>sg :Ggrep<cr>
+nnoremap <leader>sg :Ggrep<cr>
 
 if !has_key(g:n_which_key_map, 'g')
   let g:n_which_key_map.g = {}
