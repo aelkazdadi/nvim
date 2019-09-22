@@ -1,9 +1,9 @@
 function s:SID()
-    return matchstr(expand('<sfile>'), '<SNR>\zs\d\+\ze_SID$')
+  return matchstr(expand('<sfile>'), '<SNR>\zs\d\+\ze_SID$')
 endfunction
 
 function <SID>prefix()
-    return '<SNR>' . s:SID() . '_'
+  return '<SNR>' . s:SID() . '_'
 endfunction
 
 function s:HideBufferWindow(bufnr)
@@ -57,10 +57,10 @@ augroup ScrollOff
 augroup end
 
 function s:bufdelete_noforce(lines)
-    for line in a:lines
-        let nr = str2nr(matchstr(line, '\[\zs[0-9]*\ze\]'))
-        if nr | call CloseBuffer(nr, 0) | endif
-    endfor
+  for line in a:lines
+    let nr = str2nr(matchstr(line, '\[\zs[0-9]*\ze\]'))
+    if nr | call CloseBuffer(nr, 0) | endif
+  endfor
 endfunction
 
 nnoremap <silent> <leader>bd
