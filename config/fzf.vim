@@ -6,7 +6,13 @@ nnoremap <silent> <leader>ff
       \ '--preview', $HOME . '''/.local/share/nvim/plugged/fzf.vim/bin/preview.sh'' {}']},
       \ 0)<cr>
 
-nnoremap <silent> <leader>bb :Buffers<cr>
+" nnoremap <silent> <leader>bb :Buffers<cr>
+nnoremap <silent> <leader>bb
+      \ :call fzf#vim#buffers('', {'options': [
+      \ '+m', '-x', '--tiebreak=index', '--header-lines=0',
+      \ '--ansi', '-d', '\t', '-n', '2,1..2', '--prompt', 'Buf> ', ]
+      \ },
+      \ 0)<cr>
 
 nnoremap <silent> <leader>st
       \ :call fzf#vim#buffers('^term://', {
