@@ -59,6 +59,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 " Themes
 Plug 'gruvbox-community/gruvbox'
 Plug 'patstockwell/vim-monokai-tasty'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-airline/vim-airline-themes'
 " Plugins
 Plug 'neoclide/coc.nvim', { 'branch' : 'release' }
@@ -90,9 +91,18 @@ Plug 'jeetsukumaran/vim-pythonsense'
 Plug 'liuchengxu/vim-which-key'
 Plug 'unblevable/quick-scope'
 Plug 'luochen1990/rainbow'
+Plug 'terryma/vim-expand-region'
+Plug 'vim-scripts/matchit.zip'
+Plug 'pbrisbin/vim-mkdir'
+Plug 'nelstrom/vim-visual-star-search'
+Plug 'dbakker/vim-projectroot'
 call plug#end()
 
 let g:rainbow_active = 1
+augroup Rainbow
+  autocmd!
+  autocmd FileType cmake RainbowToggleOff
+augroup end
 
 let g:better_whitespace_operator = ''
 let g:better_whitespace_filetypes_blacklist =
