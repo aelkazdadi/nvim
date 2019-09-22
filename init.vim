@@ -217,6 +217,7 @@ cnoreabbrev hh help
 " Windows
 nnoremap <silent> <c-space>d :close<cr>
 nnoremap <silent> <c-space><c-space> :terminal<cr>
+
 nnoremap <silent> <c-space>v :vsplit <bar> terminal<cr>
 nnoremap <silent> <c-space>s :split  <bar> terminal<cr>
 nnoremap <silent> <c-space>t :tabnew <bar> terminal<cr>
