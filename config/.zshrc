@@ -5,7 +5,8 @@ unalias cd >/dev/null 2>&1
 unalias gd >/dev/null 2>&1
 unalias e >/dev/null 2>&1
 
-[[ -z LOCAL_HOME ]] && LOCAL_HOME=$HOME
+[[ -z LOCAL_HOME ]] || LOCAL_HOME=$HOME
+
 function cd() {
   HOME=$LOCAL_HOME builtin cd "$@"
   python3 $VIMCONFIG/config/shell.py lcd
