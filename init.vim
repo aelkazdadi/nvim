@@ -147,7 +147,7 @@ call s:Source('config/terminal.vim')
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Other User Config                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme vim-monokai-tasty
+colorscheme gruvbox
 
 nnoremap <leader><tab> <c-^>
 let g:n_which_key_map['<Tab>'] = 'alternate-buffer'
