@@ -2,8 +2,8 @@
 VENV_DIR=$HOME/.local/share/nvim
 
 [ -d "$VENV_DIR/venv" ] || python3 -m venv --prompt='neovim' "$VENV_DIR/venv"
-$VENV_DIR/venv/bin/pip install\
-  wheel\
+$VENV_DIR/venv/bin/pip install wheel
+$VENV_DIR/venv/bin/pip install \
   scikit-build\
   appdirs\
   astroid\
