@@ -211,7 +211,7 @@ augroup CmdWinHighlight
 augroup end
 
 " Help in vertical split
-cnoreabbrev h vertical help
+cnoreabbrev h tab help
 cnoreabbrev hh help
 
 " Windows
