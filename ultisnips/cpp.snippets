@@ -1,0 +1,19 @@
+priority -30
+
+snippet fore "for loop (container)"
+for (const auto& ${1:e} : ${2:container}) {
+	${VISUAL}$0
+}
+endsnippet
+
+snippet for "for loop"
+for (${1:long} ${2:i} = 0; $2 < ${3:count}; ${4:++$2}) {
+	${VISUAL}$0
+}
+endsnippet
+
+snippet fori "for loop"
+for (${1:long} ${2:i} = 0; $2 < ${3:count}; ${4:++$2}) {
+	${VISUAL}$0
+}
+endsnippet
