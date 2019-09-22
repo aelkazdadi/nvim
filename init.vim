@@ -124,14 +124,7 @@ let g:highlightedyank_highlight_duration = 300
 let g:highlightedyank_highlight_duration = 300
 
 " Quick Scope
-let g:qs_lazy_highlight = 1
-augroup QuickScope
-  autocmd!
-  autocmd FileType fugitive,help
-        \ call setbufvar(str2nr(expand('<abuf>')), 'qs_local_disable', 1)
-  autocmd TermOpen *
-        \ call setbufvar(str2nr(expand('<abuf>')), 'qs_local_disable', 1)
-augroup end
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
 " Ale
 let g:airline#extensions#ale#enabled = 1
