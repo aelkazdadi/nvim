@@ -93,7 +93,7 @@ endfunction
 
 augroup LocalLeaderInit
   autocmd!
-  autocmd FileType python,vim,c,cpp,rust
+  autocmd FileType python,vim,c,cpp,rust,cmake
         \ nmap <buffer><silent> <localleader> \
         \ call LocalWhichKeyInit() <bar>
         \ call CocMapInit() <cr>,|
