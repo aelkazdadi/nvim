@@ -178,8 +178,8 @@ vnoremap <leader>p "+p
 nnoremap <leader>P "+P
 nnoremap ]p o<c-u><esc>p
 nnoremap [p O<c-u><esc>p
-nnoremap ]P o<c-u><esc>"+p
-nnoremap [P O<c-u><esc>"+p
+nnoremap ]P o<esc>0D"+p
+nnoremap [P O<esc>0D"+p
 
 let g:n_which_key_map.y = 'copy-clipboard'
 let g:n_which_key_map.p = 'paste-clipboard-after'
