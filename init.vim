@@ -96,6 +96,7 @@ Plug 'vim-scripts/matchit.zip'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'dbakker/vim-projectroot'
+Plug 'enricobacis/vim-airline-clock'
 call plug#end()
 
 let g:rainbow_active = 1
