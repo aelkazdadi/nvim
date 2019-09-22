@@ -221,6 +221,9 @@ nnoremap <silent> <c-space><c-space> :terminal<cr>
 nnoremap <silent> <c-space>v :vsplit <bar> terminal<cr>
 nnoremap <silent> <c-space>s :split  <bar> terminal<cr>
 nnoremap <silent> <c-space>t :tabnew <bar> terminal<cr>
+tnoremap <silent> <c-space>v <c-\><c-n>:vsplit <bar> terminal<cr>
+tnoremap <silent> <c-space>s <c-\><c-n>:split  <bar> terminal<cr>
+tnoremap <silent> <c-space>t <c-\><c-n>:tabnew <bar> terminal<cr>
 
 tnoremap <silent> <c-h> <c-\><c-n><c-w>h
 tnoremap <silent> <c-j> <c-\><c-n><c-w>j
