@@ -6,9 +6,6 @@ nnoremap [G 9999[g
 
 nnoremap <leader>gr :Gread<cr>
 nnoremap <leader>gg :Gwrite<cr>
-nnoremap <leader>ghh <plug>GitGutterStageHunk
-nnoremap <leader>ghr <plug>GitGutterUndoHunk
-nnoremap <Leader>ghp <Plug>GitGutterPreviewHunk
 
 nnoremap <leader>g-h :Gdiff HEAD<cr>
 nnoremap <leader>g-- :Gdiff<cr>
@@ -40,12 +37,6 @@ let g:n_which_key_map.g.m = 'move'
 let g:n_which_key_map.g.s = 'status'
 let g:n_which_key_map.g['<CR>'] = 'commit'
 let g:n_which_key_map.s.g = 'git-grep'
-
-let g:n_which_key_map.g.h = {}
-let g:n_which_key_map.g.h.name = '+hunk'
-let g:n_which_key_map.g.h.h = 'stage'
-let g:n_which_key_map.g.h.r = 'undo'
-let g:n_which_key_map.g.h.p = 'preview'
 
 let g:n_which_key_map.g['-'] = {}
 let g:n_which_key_map.g['-'].name = '+diff'
