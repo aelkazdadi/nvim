@@ -1,4 +1,7 @@
 let $VIMCONFIG = g:config_dir
+if $ZDOTDIR_OLD != $ZDOTDIR
+  let $ZDOTDIR_OLD = $ZDOTDIR
+endif
 let $ZDOTDIR = $VIMCONFIG . '/config/'
 if empty($SHELL)
   let $SHELL = '/usr/bin/zsh'
