@@ -241,9 +241,11 @@ tnoremap <silent> <c-space>l <c-l>
 let g:n_which_key_map.q = {}
 let g:n_which_key_map.q.name = '+vim'
 
-nnoremap <silent> <leader>qq :echon 'Quit? (y/n): ' <bar>
-      \ if tolower(nr2char(getchar())) == 'y' <bar> qa <bar> else <bar> echo '' <bar> endif<cr>
 nnoremap <silent> <leader>qe :execute 'edit ' . g:config_dir . '/init.vim'<cr>
+nnoremap <silent> <leader>qq
+      \ :echon 'Quit? (y/n): ' <bar>
+      \ if tolower(nr2char(getchar())) == 'y' <bar>
+      \ qa <bar> else <bar> echo '' <bar> endif<cr>
 nnoremap <silent> <leader>qf :execute 'Files ' . g:config_dir<cr>
 let g:n_which_key_map.q.q = 'quit'
 let g:n_which_key_map.q.e = 'init-file'
