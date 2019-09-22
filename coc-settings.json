@@ -10,10 +10,6 @@
           "directory": "/tmp/ccls"
         }
       }
-    },
-    "digestif": {
-      "command": "digestif",
-      "filetypes": ["tex", "plaintex", "context"]
     }
   },
   "python.linting.enabled":false,
