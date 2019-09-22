@@ -1,7 +1,7 @@
 #!/bin/sh
 VENV_DIR=$HOME/.local/share/nvim/venv
 
-virtualenv --python="$VIRTUAL_ENV/bin/python3" --prompt='(neovim) ' $VENV_DIR
+[ -d $VENV_DIR ] || python3 -m venv --prompt='neovim' $VENV_DIR
 . $VENV_DIR/bin/activate
 $VENV_DIR/bin/pip3 install\
     appdirs\
