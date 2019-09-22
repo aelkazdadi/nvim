@@ -26,4 +26,6 @@ $VENV_DIR/bin/pip3 install\
     toml\
     typed-ast\
     Unidecode\
-    wrapt
+    wrapt\
+    rope\
+    jedi
