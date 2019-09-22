@@ -26,8 +26,7 @@ endif
 
 function! s:TermOpenCall(buf)
   if a:buf == bufnr('%')
-    startinsert
-    DisableWhitespace
+    call s:TermEnter()
   endif
   augroup TermGroup
     autocmd TermClose <buffer> call s:TermCloseCall(expand('<abuf>'))
@@ -40,8 +39,14 @@ function! s:TermCloseCall(buf)
   stopinsert
 endfunction
 
+function s:TermEnter()
+  startinsert
+  nnoremap <buffer> <c-space><c-space> <nop>
+  DisableWhitespace
+endfunction
+
 augroup TermGroup
   autocmd!
   autocmd TermOpen * call s:TermOpenCall(expand('<abuf>'))
-  autocmd WinEnter,BufEnter term://* startinsert | DisableWhitespace
+  autocmd WinEnter,BufEnter term://* call s:TermEnter()
 augroup end
