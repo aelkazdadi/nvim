@@ -29,13 +29,15 @@ function CloseBuffer(bufnr, force)
 
   tabdo call s:HideBufferTabs(bufnr)
 
-  if a:force == 2
-    execute 'bwipeout! ' . bufnr
-  elseif a:force == 1
-    execute 'bdelete! ' . bufnr
-  else
-    execute 'bdelete ' . bufnr
-  endif
+  try
+    if a:force == 2
+      execute 'bwipeout! ' . bufnr
+    elseif a:force == 1
+      execute 'bdelete! ' . bufnr
+    else
+      execute 'bdelete ' . bufnr
+    endif
+  catch | endtry
   call win_gotoid(win_id)
 endfunction
 
