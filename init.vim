@@ -2,9 +2,7 @@
 let g:python3_host_prog = $HOME . '/.local/share/nvim/venv/bin/python3'
 set pyxversion=3
 
-if $COLORTERM == 'truecolor'
-  set termguicolors
-endif
+set termguicolors
 
 filetype plugin indent on
 syntax on
