@@ -133,6 +133,10 @@ let g:ale_sign_column_always = 1
 map ]q <plug>(ale_next)
 map [q <plug>(ale_previous)
 
+" Vim visual star search
+nnoremap <leader>* <nop>
+vnoremap <leader>* <nop>
+
 call s:Source('config/which_key.vim')
 call s:Source('config/ultisnips.vim')
 call s:Source('config/vimtex.vim')

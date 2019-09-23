@@ -1,8 +1,10 @@
 let $VIMCONFIG = g:config_dir
-if $ZDOTDIR_OLD != $ZDOTDIR
+
+if $ZDOTDIR != $VIMCONFIG . '/config/'
   let $ZDOTDIR_OLD = $ZDOTDIR
 endif
 let $ZDOTDIR = $VIMCONFIG . '/config/'
+
 if empty($SHELL)
   let $SHELL = '/usr/bin/zsh'
   if !filereadable($SHELL)
@@ -26,6 +28,7 @@ endif
 
 function! s:TermOpenCall(buf)
   if a:buf == bufnr('%')
+    startinsert
     call s:TermEnter()
   endif
   augroup TermGroup
@@ -40,7 +43,7 @@ function! s:TermCloseCall(buf)
 endfunction
 
 function s:TermEnter()
-  startinsert
+  nnoremap <buffer> <cr> a
   nnoremap <buffer> <c-space><c-space> <nop>
   DisableWhitespace
 endfunction
@@ -49,4 +52,5 @@ augroup TermGroup
   autocmd!
   autocmd TermOpen * call s:TermOpenCall(expand('<abuf>'))
   autocmd WinEnter,BufEnter term://* call s:TermEnter()
+  autocmd WinLeave,BufLeave term://* echo
 augroup end
