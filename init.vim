@@ -159,6 +159,7 @@ colorscheme gruvbox
 
 nnoremap <leader><tab> <c-^>
 let g:n_which_key_map['<Tab>'] = 'alternate-buffer'
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 cnoremap <c-p> <up>
 cnoremap <c-n> <down>
