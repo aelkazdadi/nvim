@@ -115,6 +115,9 @@ let g:winresizer_start_key='<c-space>.'
 " Airline
 let g:airline_powerline_fonts=1
 
+" Python syntax
+let g:python_highlight_all = 1
+
 " Tab completion direction
 let g:SuperTabDefaultCompletionType = '<c-n>'
 
