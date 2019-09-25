@@ -76,7 +76,7 @@ function! CocMapInit()
     nmap <buffer><silent> <localleader>t <plug>(coc-type-definition)
   endif
 
-  if CocHasProvider('implementatioin')
+  if CocHasProvider('implementation')
     let g:n_which_key_maplocal[&filetype].i = 'implementation'
     nmap <buffer><silent> <localleader>i <plug>(coc-implementation)
   endif
