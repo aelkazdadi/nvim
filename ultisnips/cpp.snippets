@@ -1,4 +1,13 @@
-priority -30
+extends c
+priority -39
+
+snippet incc "include system"
+#include <${0:${VISUAL:iostream}}>
+endsnippet
+
+snippet inc "include local"
+#include "${VISUAL}$0"
+endsnippet
 
 snippet fore "for loop (container)"
 for (const auto& ${1:e} : ${2:container}) {
@@ -16,4 +25,16 @@ snippet fori "for loop"
 for (${1:long} ${2:i} = 0; $2 < ${3:count}; ${4:++$2}) {
 	${VISUAL}$0
 }
+endsnippet
+
+snippet ln "newline" i
+\n
+endsnippet
+
+snippet lnn "newline char" i
+'\n'
+endsnippet
+
+snippet cout "print to stdout"
+std::cout << ${VISUAL}$0 << '\n';
 endsnippet
