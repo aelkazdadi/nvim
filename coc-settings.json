@@ -1,5 +1,6 @@
 {
-  "coc.preferences.diagnostic.displayByAle": true,
+  "diagnostic.displayByAle": true,
+  "coc.preferences.previewAutoClose": false,
   "languageserver": {
     "ccls": {
       "command": "ccls",
@@ -13,6 +14,5 @@
     }
   },
   "python.linting.enabled":false,
-  "coc.preferences.previewAutoClose": false,
   "python.formatting.provider": "black"
 }
