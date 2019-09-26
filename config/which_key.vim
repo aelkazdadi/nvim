@@ -29,3 +29,20 @@ augroup WhichKey
   autocmd FileType which_key autocmd BufLeave <buffer> echo ''
 augroup end
 
+call which_key#register('<c-space>', 'g:which_key_map_ctrl')
+nnoremap <silent> <c-space> :<c-u>let g:which_key_map_ctrl = {} <bar>
+      \ call extend(g:which_key_map_ctrl, g:n_which_key_map_ctrl) <bar>
+      \ WhichKey '<lt>c-space>'<cr>
+vnoremap <silent> <c-space> :<c-u>let g:which_key_map_ctrl = {} <bar>
+      \ call extend(g:which_key_map_ctrl, g:v_which_key_map_ctrl) <bar>
+      \ WhichKeyVisual '\<c-space\>'<cr>
+
+let g:which_key_map_ctrl =  {}
+let g:n_which_key_map_ctrl =  {}
+let g:v_which_key_map_ctrl =  {}
+augroup WhichKey
+  autocmd!
+  " Clear command line
+  autocmd FileType which_key autocmd BufLeave <buffer> echo ''
+augroup end
+

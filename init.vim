@@ -248,6 +248,15 @@ cnoreabbrev h tab help
 cnoreabbrev hh help
 
 " Windows
+let g:n_which_key_map_ctrl['.'] = 'window-resizer'
+let g:n_which_key_map_ctrl.d = 'close-window'
+let g:n_which_key_map_ctrl['='] = 'balance-splits'
+let g:n_which_key_map_ctrl['<C-Space>'] = 'term-current-split'
+let g:n_which_key_map_ctrl.s = 'term-split-horizontal'
+let g:n_which_key_map_ctrl.v = 'term-split-vertical'
+let g:n_which_key_map_ctrl.t = 'term-new-tab'
+let g:n_which_key_map_ctrl.o = 'maximize-window'
+
 nnoremap <silent> <c-space>d :close<cr>
 nnoremap <silent> <c-space>= <c-w>=
 nnoremap <silent> <c-space><c-space> :terminal<cr>

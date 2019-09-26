@@ -1,6 +1,19 @@
+let g:n_which_key_map_ctrl.n = 'next-tab'
+let g:n_which_key_map_ctrl.p = 'prev-tab'
+let g:n_which_key_map_ctrl.0 = 'which_key_ignore'
+let g:n_which_key_map_ctrl.1 = 'which_key_ignore'
+let g:n_which_key_map_ctrl.2 = 'which_key_ignore'
+let g:n_which_key_map_ctrl.3 = 'which_key_ignore'
+let g:n_which_key_map_ctrl.4 = 'which_key_ignore'
+let g:n_which_key_map_ctrl.5 = 'which_key_ignore'
+let g:n_which_key_map_ctrl.6 = 'which_key_ignore'
+let g:n_which_key_map_ctrl.7 = 'which_key_ignore'
+let g:n_which_key_map_ctrl.8 = 'which_key_ignore'
+let g:n_which_key_map_ctrl.9 = 'which_key_ignore'
+
 " Next/previous tab
-nnoremap <c-space>n <c-\><c-n>gt
-nnoremap <c-space>p <c-\><c-n>gT
+nnoremap <c-space>n gt
+nnoremap <c-space>p gT
 
 " Navigate tabs
 nnoremap <c-space>1 <c-\><c-n>1gt

@@ -16,9 +16,6 @@ if empty($SHELL)
 endif
 
 " Keep active window only
-nnoremap <silent> <c-space>o :call MaximizeWindow()<cr>
-tnoremap <silent> <c-space>o :call MaximizeWindow()<cr>
-
 if $SHELL == '/usr/bin/zsh'
   let &shell = $SHELL
 endif
@@ -44,6 +41,7 @@ endfunction
 
 function s:TermEnter()
   nnoremap <buffer> <cr> a
+  let g:n_which_key_map_ctrl['<C-Space>'] = 'disable-highlight'
   nnoremap <buffer><silent> <c-space><c-space> :nohlsearch<cr>
   DisableWhitespace
 endfunction
@@ -52,5 +50,5 @@ augroup TermGroup
   autocmd!
   autocmd TermOpen * call s:TermOpenCall(expand('<abuf>'))
   autocmd WinEnter,BufEnter term://* call s:TermEnter()
-  autocmd WinLeave,BufLeave term://* echo
+  autocmd WinLeave,BufLeave term://* echo | let g:n_which_key_map_ctrl['<C-Space>'] = 'term-current-split'
 augroup end
