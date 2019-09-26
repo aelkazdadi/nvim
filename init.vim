@@ -161,8 +161,8 @@ call s:Source('config/terminal.vim')
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Other User Config                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:light_theme="PaperColor"
-let g:dark_theme="gruvbox"
+let g:light_theme = "PaperColor"
+let g:dark_theme ="gruvbox"
 
 if str2nr(strftime("%H")) < 20
   set background=light
