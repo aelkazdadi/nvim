@@ -168,7 +168,8 @@ call s:Source('config/terminal.vim')
 let g:light_theme = "PaperColor"
 let g:dark_theme ="gruvbox"
 
-if str2nr(strftime("%H")) < 20
+let hour = str2nr(strftime("%H"))
+if hour > 7 && hour < 20
   set background=light
   execute "colorscheme " . g:light_theme
 else
