@@ -139,6 +139,10 @@ map [q <plug>(ale_previous)
 " Vim visual star search
 nnoremap <leader>* <nop>
 vnoremap <leader>* <nop>
+augroup VisualStar
+  autocmd!
+  autocmd VimEnter * execute "vunmap <leader>*" | execute "nunmap <leader>*"
+augroup end
 
 let g:airline#extensions#clock#updatetime = 1000
 let g:airline#extensions#clock#format = '%b%d | %H:%M:%S'
