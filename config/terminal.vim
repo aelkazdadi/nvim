@@ -44,7 +44,7 @@ endfunction
 
 function s:TermEnter()
   nnoremap <buffer> <cr> a
-  nnoremap <buffer> <c-space><c-space> <nop>
+  nnoremap <buffer><silent> <c-space><c-space> :nohlsearch<cr>
   DisableWhitespace
 endfunction
 
