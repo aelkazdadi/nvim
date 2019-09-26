@@ -6,6 +6,7 @@ VENV_DIR="$LOCAL_HOME/.local/share/nvim"
 $VENV_DIR/venv/bin/pip install wheel
 $VENV_DIR/venv/bin/pip install \
   scikit-build\
+  pyyaml\
   appdirs\
   astroid\
   attrs\
