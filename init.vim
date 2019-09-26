@@ -179,7 +179,7 @@ function ChangeTheme()
   endif
 endfunction
 
-map <expr> <F12> ChangeTheme()
+map <expr> <F2> ChangeTheme()
 
 nnoremap <leader><tab> <c-^>
 let g:n_which_key_map['<Tab>'] = 'alternate-buffer'
