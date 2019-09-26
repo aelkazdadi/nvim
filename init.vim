@@ -140,6 +140,9 @@ map [q <plug>(ale_previous)
 nnoremap <leader>* <nop>
 vnoremap <leader>* <nop>
 
+let g:airline#extensions#clock#updatetime = 1000
+let g:airline#extensions#clock#format = '%b%d | %H:%M:%S'
+
 call s:Source('config/which_key.vim')
 call s:Source('config/ultisnips.vim')
 call s:Source('config/vimtex.vim')
