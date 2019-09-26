@@ -284,6 +284,9 @@ tnoremap <silent> <c-space>j <c-j>
 tnoremap <silent> <c-space>k <c-k>
 tnoremap <silent> <c-space>l <c-l>
 
+nnoremap <silent> <c-space>o :call MaximizeWindow()<cr>
+tnoremap <silent> <c-space>o :call MaximizeWindow()<cr>
+
 " Vim
 let g:n_which_key_map.q = {}
 let g:n_which_key_map.q.name = '+vim'
