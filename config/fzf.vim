@@ -58,7 +58,7 @@ let g:n_which_key_map.g.C = 'commits-current-file'
 
 augroup FzfMappings
   autocmd!
-  autocmd FileType fzf
+  autocmd FileType fzf,skim
         \ tnoremap <buffer> <c-h> <c-h>|
         \ tnoremap <buffer> <c-j> <c-j>|
         \ tnoremap <buffer> <c-k> <c-k>|
