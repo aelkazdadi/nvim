@@ -32,7 +32,6 @@ set gdefault              " Global substitution by default
 set inccommand=split      " Live substitution
 set foldlevel=99          " Unfold by default
 set ignorecase smartcase  " Smartcase in search/substitution
-set background=dark
 set updatetime=100
 set timeout timeoutlen=500
 
@@ -57,10 +56,11 @@ endfunction
 " Vim Plug
 call plug#begin('~/.local/share/nvim/plugged')
 " Themes
-Plug 'gruvbox-community/gruvbox'
-Plug 'patstockwell/vim-monokai-tasty'
-Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-airline/vim-airline-themes'
+Plug 'gruvbox-community/gruvbox'
+Plug 'cormacrelf/vim-colors-github'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'mkarmona/materialbox'
 " Plugins
 Plug 'neoclide/coc.nvim', { 'branch' : 'release' }
 Plug 'w0rp/ale'
@@ -155,7 +155,28 @@ call s:Source('config/terminal.vim')
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Other User Config                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme gruvbox
+let g:light_theme="PaperColor"
+let g:dark_theme="gruvbox"
+
+if str2nr(strftime("%H")) < 20
+  set background=light
+  execute "colorscheme " . g:light_theme
+else
+  set background=dark
+  execute "colorscheme" . g:dark_theme
+endif
+
+function ChangeTheme()
+  if &background == "light"
+    set background=dark
+  colorscheme gruvbox
+  else
+    set background=light
+    colorscheme PaperColor
+  endif
+endfunction
+
+map <expr> <F12> ChangeTheme()
 
 nnoremap <leader><tab> <c-^>
 let g:n_which_key_map['<Tab>'] = 'alternate-buffer'
