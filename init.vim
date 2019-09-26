@@ -176,10 +176,10 @@ endif
 function ChangeTheme()
   if &background == "light"
     set background=dark
-  colorscheme gruvbox
+    execute "colorscheme " . g:dark_theme
   else
     set background=light
-    colorscheme PaperColor
+    execute "colorscheme " . g:light_theme
   endif
 endfunction
 
