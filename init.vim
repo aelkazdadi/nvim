@@ -166,7 +166,7 @@ if str2nr(strftime("%H")) < 20
   execute "colorscheme " . g:light_theme
 else
   set background=dark
-  execute "colorscheme" . g:dark_theme
+  execute "colorscheme " . g:dark_theme
 endif
 
 function ChangeTheme()
