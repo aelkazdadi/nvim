@@ -54,6 +54,7 @@ function! s:Source(fname)
 endfunction
 
 " Vim Plug
+set rtp+=$LOCAL_HOME/.local/share/nvim
 call plug#begin('~/.local/share/nvim/plugged')
 " Themes
 Plug 'vim-airline/vim-airline-themes'
@@ -97,6 +98,9 @@ Plug 'nelstrom/vim-visual-star-search'
 Plug 'dbakker/vim-projectroot'
 Plug 'enricobacis/vim-airline-clock'
 call plug#end()
+
+" Skim
+set rtp+=$LOCAL_HOME/.local/share/skim
 
 let g:rainbow_active = 1
 augroup Rainbow
