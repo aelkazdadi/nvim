@@ -1,5 +1,6 @@
 #!/bin/sh
-VENV_DIR=$HOME/.local/share/nvim
+[ -z $LOCAL_HOME ] && LOCAL_HOME="$HOME"
+VENV_DIR="$LOCAL_HOME/.local/share/nvim"
 
 [ -d "$VENV_DIR/venv" ] || python3 -m venv --prompt='neovim' "$VENV_DIR/venv"
 $VENV_DIR/venv/bin/pip install wheel
