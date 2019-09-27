@@ -94,7 +94,6 @@ Plug 'luochen1990/rainbow'
 Plug 'terryma/vim-expand-region'
 Plug 'vim-scripts/matchit.zip'
 Plug 'pbrisbin/vim-mkdir'
-Plug 'nelstrom/vim-visual-star-search'
 Plug 'dbakker/vim-projectroot'
 Plug 'enricobacis/vim-airline-clock'
 call plug#end()
@@ -140,12 +139,20 @@ map ]q <plug>(ale_next)
 map [q <plug>(ale_previous)
 
 " Vim visual star search
-nnoremap <leader>* <nop>
-vnoremap <leader>* <nop>
-augroup VisualStar
-  autocmd!
-  autocmd VimEnter * execute "vunmap <leader>*" | execute "nunmap <leader>*"
-augroup end
+function! SearchSelection()
+  let temp = @"
+  normal! gvy
+  let @/ = substitute(@", '\\', '\\\\', 'g')
+  let @/ = substitute(@/, '\/', '\\\/', 'g')
+  let @/ = substitute(@/, '\n', '\\n', 'g')
+  let @/ = substitute(@/, '\[', '\\[', 'g')
+  let @/ = substitute(@/, '\~', '\\~', 'g')
+  let @/ = substitute(@/, '\.', '\\.', 'g')
+  let @" = temp
+endfunction
+xnoremap <silent> * <esc>:call SearchSelection()<cr>/<c-r>/<cr>
+xnoremap <silent> # <esc>:call SearchSelection()<cr>?<c-r>/<cr>
+
 
 let g:airline#extensions#clock#updatetime = 1000
 let g:airline#extensions#clock#format = '%b%d | %H:%M:%S'
