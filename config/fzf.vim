@@ -9,14 +9,14 @@ nnoremap <silent> <leader>ff
 " nnoremap <silent> <leader>bb :Buffers<cr>
 nnoremap <silent> <leader>bb
       \ :call fzf#vim#buffers('', {'options': [
-      \ '+m', '-x', '--tiebreak=index', '--header-lines=0',
+      \ '-x', '--tiebreak=index', '--header-lines=0',
       \ '--ansi', '-d', '\t', '-n', '2,1..2', '--prompt', 'Buf> ', ]
       \ },
       \ 0)<cr>
 
 nnoremap <silent> <leader>st
       \ :call fzf#vim#buffers('^term://', {
-      \ 'options':['+m', '--cycle']}, 0)<cr>
+      \ 'options':['--cycle']}, 0)<cr>
 nnoremap <silent> <leader>ss :BLines<cr>
 nnoremap <silent> <leader>sb :Lines<cr>
 nnoremap <silent> <leader>sc :nohlsearch<cr>
