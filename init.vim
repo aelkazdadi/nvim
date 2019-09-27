@@ -262,6 +262,8 @@ augroup end
 cnoreabbrev h tab help
 cnoreabbrev hh help
 
+cnoreabbre \( \(\)<left><left>
+
 " Windows
 let g:n_which_key_map_ctrl['.'] = 'window-resizer'
 let g:n_which_key_map_ctrl.d = 'close-window'
