@@ -221,20 +221,16 @@ nnoremap <leader>y "+y
 vnoremap <leader>y "+y
 
 vnoremap P pgvy`>
-nnoremap <leader>p "+p
-vnoremap <leader>p "+p
-nnoremap <leader>P "+P
+nnoremap <m-p> "+p
+vnoremap <m-p> "+p
+nnoremap <m-P> "+P
 nnoremap ]p o<c-u><esc>p
 nnoremap [p O<c-u><esc>p
 nnoremap ]P o<esc>0D"+p
 nnoremap [P O<esc>0D"+p
 
 let g:n_which_key_map.y = 'copy-clipboard'
-let g:n_which_key_map.p = 'paste-clipboard-after'
-let g:n_which_key_map.P = 'paste-clipboard-before'
 let g:v_which_key_map.y = 'copy-clipboard'
-let g:v_which_key_map.p = 'paste-clipboard-after'
-let g:v_which_key_map.P = 'paste-clipboard-before'
 
 " Moving in insert mode
 inoremap <c-h> <left>
