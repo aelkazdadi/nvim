@@ -4,8 +4,13 @@ nmap [g <plug>(signify-prev-hunk)
 nnoremap ]G 9999]g
 nnoremap [G 9999[g
 
+augroup SignifyDetectChange
+  autocmd!
+  autocmd TextChanged */.git/index SignifyRefresh
+augroup end
+
 nnoremap <leader>gr :Gread<cr>
-nnoremap <leader>gg :Gwrite<cr>
+nnoremap <leader>gg :Gwrite <bar> sleep 10m <bar> SignifyRefresh<cr>
 
 nnoremap <leader>g-h :Gdiff HEAD<cr>
 nnoremap <leader>g-- :Gdiff<cr>
