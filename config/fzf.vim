@@ -3,7 +3,7 @@ nnoremap <silent> <leader>ff
       \ :call fzf#vim#files('', {'options': [
       \ '--cycle', '--preview-window', 'right',
       \ '--bind=ctrl-a:select-all,ctrl-d:deselect-all',
-      \ '--preview', $HOME . '''/.local/share/nvim/plugged/fzf.vim/bin/preview.sh'' {}']},
+      \ '--preview', $HOME . '''/.local/share/nvim/plugged/skim.vim/bin/preview.sh'' {}']},
       \ 0)<cr>
 
 " nnoremap <silent> <leader>bb :Buffers<cr>
