@@ -96,6 +96,7 @@ Plug 'vim-scripts/matchit.zip'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'dbakker/vim-projectroot'
 Plug 'enricobacis/vim-airline-clock'
+Plug 'blueyed/vim-diminactive'
 call plug#end()
 
 " Skim
