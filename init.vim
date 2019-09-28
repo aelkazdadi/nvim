@@ -224,8 +224,8 @@ vnoremap P pgvy`>
 nnoremap <m-p> "+p
 vnoremap <m-p> "+p
 nnoremap <m-P> "+P
-nnoremap ]p o<c-u><esc>p
-nnoremap [p O<c-u><esc>p
+nnoremap ]p o<esc>0Dp
+nnoremap [p O<esc>0Dp
 nnoremap ]P o<esc>0D"+p
 nnoremap [P O<esc>0D"+p
 
