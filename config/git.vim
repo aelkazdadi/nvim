@@ -9,6 +9,9 @@ augroup SignifyDetectChange
   autocmd TextChanged */.git/index SignifyRefresh
 augroup end
 
+nnoremap <leader>gf :SignifyFold!<cr>
+nnoremap <leader>gh :SignifyToggleHighlight<cr>
+
 nnoremap <leader>gr :Gread<cr>
 nnoremap <leader>gg :Gwrite <bar> sleep 10m <bar> SignifyRefresh<cr>
 
@@ -40,6 +43,8 @@ let g:n_which_key_map.g.g = 'stage-file'
 let g:n_which_key_map.g.d = 'remove'
 let g:n_which_key_map.g.m = 'move'
 let g:n_which_key_map.g.s = 'status'
+let g:n_which_key_map.g.f = 'fold-diff'
+let g:n_which_key_map.g.h = 'highlight-diff'
 let g:n_which_key_map.g['<CR>'] = 'commit'
 let g:n_which_key_map.s.g = 'git-grep'
 
