@@ -88,7 +88,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'pboettch/vim-cmake-syntax'
 Plug 'vim-python/python-syntax'
 Plug 'jeetsukumaran/vim-pythonsense'
-Plug 'liuchengxu/vim-which-key'
+Plug 'aelkazdadi/vim-which-key', {'branch': 'custom-display-names'}
 Plug 'unblevable/quick-scope'
 Plug 'luochen1990/rainbow'
 Plug 'terryma/vim-expand-region'
@@ -145,9 +145,7 @@ function! SearchSelection()
   let @/ = substitute(@", '\\', '\\\\', 'g')
   let @/ = substitute(@/, '\/', '\\\/', 'g')
   let @/ = substitute(@/, '\n', '\\n', 'g')
-  let @/ = substitute(@/, '\[', '\\[', 'g')
-  let @/ = substitute(@/, '\~', '\\~', 'g')
-  let @/ = substitute(@/, '\.', '\\.', 'g')
+  let @/ = '\V' . @/
   let @" = temp
 endfunction
 xnoremap <silent> * <esc>:call SearchSelection()<cr>/<c-r>/<cr>
