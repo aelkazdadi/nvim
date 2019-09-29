@@ -34,7 +34,7 @@ nnoremap <silent> <c-space> :<c-u>let g:which_key_map_ctrl = {} <bar>
       \ WhichKey '<lt>c-space>'<cr>
 vnoremap <silent> <c-space> :<c-u>let g:which_key_map_ctrl = {} <bar>
       \ call extend(g:which_key_map_ctrl, g:v_which_key_map_ctrl) <bar>
-      \ WhichKeyVisual '\<c-space\>'<cr>
+      \ WhichKeyVisual '<lt>c-space>'<cr>
 
 let g:which_key_map_ctrl =  {}
 let g:n_which_key_map_ctrl =  {}
