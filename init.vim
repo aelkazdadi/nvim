@@ -96,6 +96,7 @@ Plug 'vim-scripts/matchit.zip'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'dbakker/vim-projectroot'
 Plug 'enricobacis/vim-airline-clock'
+Plug 'blueyed/vim-diminactive'
 call plug#end()
 
 " Skim
@@ -145,9 +146,7 @@ function! SearchSelection()
   let @/ = substitute(@", '\\', '\\\\', 'g')
   let @/ = substitute(@/, '\/', '\\\/', 'g')
   let @/ = substitute(@/, '\n', '\\n', 'g')
-  let @/ = substitute(@/, '\[', '\\[', 'g')
-  let @/ = substitute(@/, '\~', '\\~', 'g')
-  let @/ = substitute(@/, '\.', '\\.', 'g')
+  let @/ = '\V' . @/
   let @" = temp
 endfunction
 xnoremap <silent> * <esc>:call SearchSelection()<cr>/<c-r>/<cr>
