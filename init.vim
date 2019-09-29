@@ -285,6 +285,7 @@ tnoremap <silent> <c-h> <c-\><c-n><c-w>h
 tnoremap <silent> <c-j> <c-\><c-n><c-w>j
 tnoremap <silent> <c-k> <c-\><c-n><c-w>k
 tnoremap <silent> <c-l> <c-\><c-n><c-w>l
+tnoremap <c-\> <c-\>
 
 tnoremap <silent> <c-space><space> <c-space>
 tnoremap <silent> <c-space><c-space> <c-\><c-n>
