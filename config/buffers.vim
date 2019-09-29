@@ -58,7 +58,7 @@ endfunction
 augroup ScrollOff
   autocmd!
   autocmd WinEnter,BufEnter * call s:ScrollOffCall()
-  autocmd TermOpen * set scrolloff=0
+  autocmd TermOpen * call s:ScrollOffCall()
 augroup end
 
 function s:bufdelete_noforce(lines)
