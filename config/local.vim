@@ -87,7 +87,7 @@ function! CocMapInit()
   if exists('b:ale_fixers') && ! empty(b:ale_fixers)
     nmap <localleader>q <plug>(ale_fix)
   elseif CocHasProvider('format')
-    nmap <localleader>q <plug>(coc-format)
+    nmap <silent> <localleader>q :call CocAction('format')<cr>
   else
     call remove(g:n_which_key_maplocal[&filetype], 'q')
   endif
