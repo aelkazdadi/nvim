@@ -62,6 +62,7 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'cormacrelf/vim-colors-github'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'mkarmona/materialbox'
+Plug 'lifepillar/vim-solarized8'
 " Plugins
 Plug 'neoclide/coc.nvim', { 'branch' : 'release' }
 Plug 'w0rp/ale'
@@ -171,7 +172,7 @@ call s:Source('config/terminal.vim')
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Other User Config                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:light_theme = "PaperColor"
+let g:light_theme = "solarized8"
 let g:dark_theme ="gruvbox"
 
 let hour = str2nr(strftime("%H"))
