@@ -41,14 +41,17 @@ function CloseBuffer(bufnr, force)
   call win_gotoid(win_id)
 endfunction
 
-" ScrollOff
+" Buffer specific settings
 function s:ScrollOffCall()
   if &buftype ==# 'terminal'
     set scrolloff=0
+    set notimeout
   elseif &buftype ==# 'help'
     set scrolloff=999
+    set timeout
   else
     set scrolloff=5
+    set timeout
   endif
 endfunction
 
