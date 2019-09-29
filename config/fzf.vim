@@ -3,7 +3,8 @@ nnoremap <silent> <leader>ff
       \ :call fzf#vim#files('', {'options': [
       \ '--cycle', '--preview-window', 'right',
       \ '--bind=ctrl-a:select-all,ctrl-d:deselect-all',
-      \ '--preview', $HOME . '''/.local/share/nvim/plugged/fzf.vim/bin/preview.sh'' {}']},
+      \ '--preview', $LOCAL_HOME .
+      \ '''/.local/share/nvim/plugged/skim.vim/bin/preview.sh'' {}']},
       \ 0)<cr>
 
 " nnoremap <silent> <leader>bb :Buffers<cr>
@@ -33,6 +34,7 @@ let g:fzf_action = {
       \ 'ctrl-t': 'tab split',
       \ 'ctrl-s': 'split',
       \ 'ctrl-v': 'vsplit' }
+let g:skim_action = g:fzf_action
 
 " Insert mode completion
 imap <c-x><c-f> <plug>(fzf-complete-path)
