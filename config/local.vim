@@ -1,3 +1,5 @@
+let g:ale_python_black_options='--line-length=80'
+
 " coc mappings
 inoremap <silent><expr> <c-space> coc#refresh()
 
