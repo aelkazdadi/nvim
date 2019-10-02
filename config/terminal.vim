@@ -37,6 +37,8 @@ function! s:TermCloseCall(buf)
   call CloseBuffer(a:buf, 2)
   filetype detect
   stopinsert
+  set scrolloff=5
+  set timeout
 endfunction
 
 function s:TermEnter()
