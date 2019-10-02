@@ -11,9 +11,10 @@ augroup end
 
 nnoremap <leader>gf :SignifyFold!<cr>
 nnoremap <leader>gh :SignifyToggleHighlight<cr>
+nnoremap <leader>gg :SignifyHunkPreview<cr>
 
 nnoremap <leader>gr :Gread<cr>
-nnoremap <leader>gg :Gwrite <bar> sleep 10m <bar> SignifyRefresh<cr>
+nnoremap <leader>gw :Gwrite <bar> sleep 10m <bar> SignifyRefresh<cr>
 
 nnoremap <leader>g-h :Gdiff HEAD<cr>
 nnoremap <leader>g-- :Gdiff<cr>
@@ -39,7 +40,8 @@ if !has_key(g:n_which_key_map, 'g')
 endif
 let g:n_which_key_map.g.name = '+git'
 let g:n_which_key_map.g.r = 'read-staged'
-let g:n_which_key_map.g.g = 'stage-file'
+let g:n_which_key_map.g.w = 'stage-file'
+let g:n_which_key_map.g.g = 'preview-hunk'
 let g:n_which_key_map.g.d = 'remove'
 let g:n_which_key_map.g.m = 'move'
 let g:n_which_key_map.g.s = 'status'
