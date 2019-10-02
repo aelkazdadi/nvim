@@ -1,8 +1,8 @@
 " Signify mappings
 nmap ]g <plug>(signify-next-hunk)
 nmap [g <plug>(signify-prev-hunk)
-nnoremap ]G 9999]g
-nnoremap [G 9999[g
+nmap ]G 9999]g
+nmap [G 9999[g
 
 augroup SignifyDetectChange
   autocmd!
