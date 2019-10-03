@@ -198,6 +198,12 @@ endfunction
 
 map <expr> <F2> ChangeTheme()
 
+" Disable search highlighting
+nnoremap <silent> <M-.> :nohlsearch<cr>
+vnoremap <silent> <M-.> :<c-u>nohlsearch<cr>
+inoremap <silent> <M-.> <c-o>:nohlsearch<cr>
+tnoremap <silent> <M-.> <c-\><c-n>:nohlsearch<cr>i
+
 nnoremap <leader><tab> <c-^>
 let g:n_which_key_map['<Tab>'] = 'alternate-buffer'
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
