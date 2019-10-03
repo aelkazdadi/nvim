@@ -32,6 +32,7 @@ set gdefault              " Global substitution by default
 set inccommand=split      " Live substitution
 set foldlevel=99          " Unfold by default
 set ignorecase smartcase  " Smartcase in search/substitution
+set cmdheight=2           " 2 line command line
 set updatetime=100
 set timeout timeoutlen=500
 
@@ -136,6 +137,7 @@ let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
 " Ale
 let g:airline#extensions#ale#enabled = 1
+let g:ale_virtualtext_cursor=1
 let g:ale_sign_column_always = 1
 map ]q <plug>(ale_next)
 map [q <plug>(ale_previous)
