@@ -101,6 +101,13 @@ Plug 'enricobacis/vim-airline-clock'
 Plug 'blueyed/vim-diminactive'
 call plug#end()
 
+"Gruvbox
+let g:gruvbox_italic = 1
+let g:gruvbox_contrast_light = "soft"
+let g:gruvbox_contrast_dark = "soft"
+let g:gruvbox_improved_strings = 1
+let g:gruvbox_improved_warnings = 1
+
 " Skim
 set rtp+=$LOCAL_HOME/.local/share/skim
 
@@ -174,7 +181,7 @@ call s:Source('config/terminal.vim')
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Other User Config                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:light_theme = "solarized8"
+let g:light_theme = "gruvbox"
 let g:dark_theme ="gruvbox"
 
 let hour = str2nr(strftime("%H"))
