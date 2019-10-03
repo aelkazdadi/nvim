@@ -20,7 +20,6 @@ nnoremap <silent> <leader>st
       \ 'options':['--cycle']}, 0)<cr>
 nnoremap <silent> <leader>ss :BLines<cr>
 nnoremap <silent> <leader>sb :Lines<cr>
-nnoremap <silent> <leader>sc :nohlsearch<cr>
 
 " Fuzzy find text in the working directory
 nnoremap <silent> <leader>sr :Rg<cr>
@@ -49,7 +48,6 @@ let g:n_which_key_map.s.name = '+search'
 let g:n_which_key_map.s.t = 'terminals'
 let g:n_which_key_map.s.s = 'current-buffer'
 let g:n_which_key_map.s.b = 'all-buffers'
-let g:n_which_key_map.s.c = 'clear-highlight'
 
 if !has_key(g:n_which_key_map, 'g')
   let g:n_which_key_map.g = {}
