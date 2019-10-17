@@ -99,6 +99,7 @@ Plug 'pbrisbin/vim-mkdir'
 Plug 'dbakker/vim-projectroot'
 Plug 'enricobacis/vim-airline-clock'
 Plug 'blueyed/vim-diminactive'
+Plug 'kshenoy/vim-signature'
 call plug#end()
 
 "Gruvbox
