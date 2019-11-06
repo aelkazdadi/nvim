@@ -1,0 +1,49 @@
+priority -40
+
+snippet init
+cmake_minimum_required(VERSION ${1:2.8.2})
+project(${2:ProjectName})
+
+set(CMAKE_CXX_STANDARD ${3:17})
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+endsnippet
+
+snippet eigen "Eigen"
+find_package(Eigen3
+             3.3
+             REQUIRED
+             NO_MODULE)
+link_libraries(Eigen3::Eigen)
+endsnippet
+
+snippet fmt "fmtlib"
+find_package(fmt REQUIRED)
+link_libraries(fmt::fmt)
+endsnippet
+
+snippet san "Sanitizers"
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG}\
+    -fsanitize=address\
+    -fsanitize=undefined\
+    -fsanitize=unsigned-integer-overflow\
+    ")
+endsnippet
+
+snippet warn "Compiler warnings"
+if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
+  set(warnings
+      -Weverything
+      -Wno-signed-enum-bitfield
+      -Wno-padded
+      -Wno-c++98-compat
+      -Wno-c++98-compat-pedantic
+      -Wno-missing-prototypes
+      -Wno-c++17-extensions)
+elseif("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
+  set(warnings
+      -Wall
+      -Wextra
+      -Wshadow
+      -Wpedantic)
+endif()
+endsnippet
