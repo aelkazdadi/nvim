@@ -35,10 +35,12 @@ endfunction
 
 function! s:TermCloseCall(buf)
   call CloseBuffer(a:buf, 2)
-  filetype detect
-  stopinsert
-  set scrolloff=5
-  set timeout
+  if bufname() !~ "term://*"
+    filetype detect
+    stopinsert
+    set scrolloff=5
+    set timeout
+  endif
 endfunction
 
 function s:TermEnter()
@@ -54,3 +56,11 @@ augroup TermGroup
   autocmd WinEnter,BufEnter term://* call s:TermEnter()
   autocmd WinLeave,BufLeave term://* echo | let g:n_which_key_map_ctrl['<C-Space>'] = 'term-current-split'
 augroup end
+
+function <SID>ReplaceTerm()
+  let nr = bufnr()
+  terminal
+  call CloseBuffer(nr, 1)
+endfunction
+
+tnoremap <m-bs> <c-\><c-n>:call <SID>ReplaceTerm()<cr>
