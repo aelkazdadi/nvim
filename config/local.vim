@@ -21,8 +21,12 @@ function! LocalWhichKeyInit()
 endfunction
 
 function! CocMapInit()
-  let g:n_which_key_maplocal[&filetype] = {}
-  let g:v_which_key_maplocal[&filetype] = {}
+  if !has_key(g:n_which_key_maplocal, &filetype)
+    let g:n_which_key_maplocal[&filetype] = {}
+  endif
+  if !has_key(g:v_which_key_maplocal, &filetype)
+    let g:v_which_key_maplocal[&filetype] = {}
+  endif
   let g:n_which_key_maplocal[&filetype].name = '+' . &filetype
 
   if CocHasProvider('rename')
