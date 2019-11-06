@@ -39,6 +39,27 @@ snippet cout "print to stdout"
 std::cout << ${VISUAL}$0 << '\n';
 endsnippet
 
+snippet fmt "print to stdout (fmtlib)"
+fmt::print("${VISUAL}$1\n"$0);
+endsnippet
+
+snippet sca "static cast" i
+static_cast<$2>(${1:${VISUAL}})$0
+endsnippet
+
+snippet idn "typeid" i
+typeid(${0:${VISUAL}}).name()
+endsnippet
+
+snippet id "typeid" i
+typeid(${0:${VISUAL}})
+endsnippet
+
+snippet sz "sizeof" i
+sizeof(${0:${VISUAL}})
+endsnippet
+
+
 snippet mainn "main (no args)" b
 int main()
 {
