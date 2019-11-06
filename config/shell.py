@@ -19,6 +19,9 @@ def main(cmd, args):
         nvim.command("edit " + abs_path(Path(args[0])))
         for arg in args[1:]:
             nvim.command("badd " + abs_path(Path(arg)))
+    if cmd == "reset":
+        nvim.command("terminal")
+        nvim.command("startinsert")
 
 
 main(argv[1], argv[2:])
