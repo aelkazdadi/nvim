@@ -284,6 +284,7 @@ let g:n_which_key_map_ctrl.o = 'maximize-window'
 nnoremap <silent> <c-space>d :close<cr>
 nnoremap <silent> <c-space>D :tabclose<cr>
 nnoremap <silent> <c-space>q :bdelete<cr>
+nnoremap <silent> <c-space>Q :bdelete!<cr>
 nnoremap <silent> <c-space>= <c-w>=
 nnoremap <silent> <c-space><c-space> :terminal<cr>
 
