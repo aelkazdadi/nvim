@@ -68,9 +68,23 @@ function s:bufdelete_noforce(lines)
   endfor
 endfunction
 
+function s:bufdelete_force(lines)
+  for line in a:lines
+    let nr = str2nr(matchstr(line, '\[\zs[0-9]*\ze\]'))
+    if nr | call CloseBuffer(nr, 2) | endif
+  endfor
+endfunction
+
 nnoremap <silent> <leader>bd
       \ :call fzf#vim#buffers('', {
       \ 'sink*':function(<SID>prefix() . 'bufdelete_noforce'),
+      \ 'options':['-m', '--cycle', '--header-lines=0',
+      \ '--bind=ctrl-a:select-all,ctrl-d:deselect-all',
+      \]}, 0)<cr>
+
+nnoremap <silent> <leader>bQ
+      \ :call fzf#vim#buffers('', {
+      \ 'sink*':function(<SID>prefix() . 'bufdelete_force'),
       \ 'options':['-m', '--cycle', '--header-lines=0',
       \ '--bind=ctrl-a:select-all,ctrl-d:deselect-all',
       \]}, 0)<cr>
@@ -79,6 +93,7 @@ let g:n_which_key_map.b = {}
 let g:n_which_key_map.b.name = '+buffers'
 let g:n_which_key_map.b.b = 'list'
 let g:n_which_key_map.b.d = 'delete'
+let g:n_which_key_map.b.Q = 'force delete'
 
 " Scratch buffer
 augroup ScratchBuf
