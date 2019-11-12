@@ -100,6 +100,8 @@ Plug 'dbakker/vim-projectroot'
 Plug 'enricobacis/vim-airline-clock'
 Plug 'blueyed/vim-diminactive'
 Plug 'kshenoy/vim-signature'
+Plug 'mbbill/undotree'
+Plug 'wellle/targets.vim'
 call plug#end()
 
 "Gruvbox
