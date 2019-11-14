@@ -87,14 +87,26 @@ function! CocMapInit()
     nmap <buffer><silent> <localleader>i <plug>(coc-implementation)
   endif
 
-  let g:n_which_key_maplocal[&filetype].q = 'fix'
+  let g:n_which_key_maplocal[&filetype].q = 'format'
   if exists('b:ale_fixers') && ! empty(b:ale_fixers)
     nmap <localleader>q <plug>(ale_fix)
   elseif CocHasProvider('format')
-    nmap <silent> <localleader>q :call CocAction('format')<cr>
+    nmap <silent> <localleader>q <plug>(coc-format)
   else
-    call remove(g:n_which_key_maplocal[&filetype], 'q')
+    let g:n_which_key_maplocal[&filetype].q = 'which_key_ignore'
   endif
+  if CocHasProvider('format')
+    let g:v_which_key_maplocal[&filetype].q = 'format'
+    vmap <silent> <localleader>q <plug>(coc-format-selected)
+  endif
+  let g:n_which_key_maplocal[&filetype].R = 'refactor'
+  nmap <buffer><silent> <localleader>R <plug>(coc-refactor)
+
+  let g:n_which_key_maplocal[&filetype].f = 'fix'
+  nmap <buffer><silent> <localleader>f <plug>(coc-fix-current)
+
+  let g:n_which_key_maplocal[&filetype]['<M-r>'] = 'restart-lsp'
+  nnoremap <buffer><silent> <localleader><m-r> :CocRestart<cr>
 endfunction
 
 augroup LocalLeaderInit

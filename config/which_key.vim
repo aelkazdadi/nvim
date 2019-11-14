@@ -5,6 +5,7 @@ let g:which_key_timeout = 100
 let g:which_key_display_names = {
       \ ' '         : '□'      ,
       \ '<CR>'      : '↵'      ,
+      \ '<M-r>'     : 'Alt-r'      ,
       \ '<BS>'      : '⌫'      ,
       \ '<C-I>'     : '⇆'      ,
       \ '<TAB>'     : '⇆'      ,
