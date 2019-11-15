@@ -13,6 +13,6 @@
       }
     }
   },
-  "python.linting.enabled":true,
+  "python.jediEnabled":false,
   "python.formatting.provider": "black"
 }
