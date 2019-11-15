@@ -2,6 +2,7 @@ setlocal shiftwidth=4 softtabstop=4
 set foldmethod=indent
 let b:ale_linters = [
       \   'flake8',
+      \   'pylint',
       \]
 let b:ale_fixers = [
       \   'isort',
