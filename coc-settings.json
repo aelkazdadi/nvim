@@ -3,7 +3,7 @@
   "coc.preferences.previewAutoClose": false,
   "languageserver": {
     "clangd": {
-      "command": "clangd-9",
+      "command": "clangd",
       "filetypes": ["c", "cpp", "objc", "objcpp"],
       "rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
       "initializationOptions": {
