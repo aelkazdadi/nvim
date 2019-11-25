@@ -88,10 +88,10 @@ function! CocMapInit()
   endif
 
   let g:n_which_key_maplocal[&filetype].q = 'format'
-  if exists('b:ale_fixers') && ! empty(b:ale_fixers)
-    nmap <localleader>q <plug>(ale_fix)
-  elseif CocHasProvider('format')
+  if CocHasProvider('format')
     nmap <silent> <localleader>q <plug>(coc-format)
+  elseif exists('b:ale_fixers') && ! empty(b:ale_fixers)
+    nmap <localleader>q <plug>(ale_fix)
   else
     let g:n_which_key_maplocal[&filetype].q = 'which_key_ignore'
   endif
