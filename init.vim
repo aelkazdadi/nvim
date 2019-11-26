@@ -63,6 +63,8 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'cormacrelf/vim-colors-github'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'mkarmona/materialbox'
+Plug 'joshdick/onedark.vim'
+Plug 'lifepillar/vim-gruvbox8'
 Plug 'lifepillar/vim-solarized8'
 " Plugins
 Plug 'neoclide/coc.nvim', { 'branch' : 'release' }
@@ -184,8 +186,8 @@ call s:Source('config/terminal.vim')
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Other User Config                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:light_theme = "gruvbox"
-let g:dark_theme ="gruvbox"
+let g:light_theme = "onedark"
+let g:dark_theme ="onedark"
 
 set background=dark
 execute "colorscheme " . g:dark_theme
