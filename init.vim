@@ -130,7 +130,7 @@ let g:better_whitespace_filetypes_blacklist =
 let g:winresizer_start_key='<c-space>.'
 
 " Airline
-let g:airline_powerline_fonts=1
+let g:airline_powerline_fonts = 1
 
 " Python syntax
 let g:python_highlight_all = 1
@@ -168,8 +168,8 @@ xnoremap <silent> * <esc>:call SearchSelection()<cr>/<c-r>/<cr>
 xnoremap <silent> # <esc>:call SearchSelection()<cr>?<c-r>/<cr>
 
 
-let g:airline#extensions#clock#updatetime = 1000
-let g:airline#extensions#clock#format = '%b%d | %H:%M:%S'
+let g:airline#extensions#clock#updatetime = 5000
+let g:airline#extensions#clock#format = '%H:%M'
 
 call s:Source('config/which_key.vim')
 call s:Source('config/ultisnips.vim')
