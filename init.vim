@@ -67,7 +67,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'lifepillar/vim-gruvbox8'
 Plug 'lifepillar/vim-solarized8'
 " Plugins
-Plug 'neoclide/coc.nvim', { 'branch' : 'release' }
+Plug 'neoclide/coc.nvim', { 'branch' : 'master' }
 Plug 'w0rp/ale'
 Plug 'tpope/vim-commentary'
 Plug 'ervandew/supertab'
