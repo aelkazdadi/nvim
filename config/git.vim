@@ -11,7 +11,7 @@ augroup end
 
 nnoremap <leader>gf :SignifyFold!<cr>
 nnoremap <leader>gh :SignifyToggleHighlight<cr>
-nnoremap <leader>gg :SignifyHunkPreview<cr>
+nnoremap <leader>gg :SignifyHunkDiff<cr>
 
 nnoremap <leader>gr :Gread<cr>
 nnoremap <leader>gw :Gwrite <bar> sleep 10m <bar> SignifyRefresh<cr>
