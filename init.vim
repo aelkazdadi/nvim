@@ -147,6 +147,9 @@ let g:highlightedyank_highlight_duration = 300
 " Quick Scope
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
+" Targets
+let g:targets_seekRanges = 'cc cr cb cB lc ac Ac lr lb ar ab lB Ar aB Ab AB rr ll rb al rB Al bb aa bB Aa BB AA'
+
 " Ale
 let g:airline#extensions#ale#enabled = 1
 let g:ale_virtualtext_cursor=1
