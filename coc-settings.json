@@ -5,7 +5,7 @@
     "clangd": {
       "command": "clangd",
       "filetypes": ["c", "cpp", "objc", "objcpp"],
-      "rootPatterns": ["compile_commands.json", ".vim/", ".git/", ".hg/"],
+      "rootPatterns": [".clangd", "compile_commands.json", ".vim/", ".git/", ".hg/"],
       "initializationOptions": {
         "cache": {
           "directory": "/tmp/clangd-cache"
