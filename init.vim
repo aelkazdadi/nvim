@@ -94,7 +94,7 @@ Plug 'vim-python/python-syntax'
 Plug 'jeetsukumaran/vim-pythonsense'
 Plug 'liuchengxu/vim-which-key'
 Plug 'unblevable/quick-scope'
-Plug 'luochen1990/rainbow'
+Plug 'aelkazdadi/rainbow', { 'branch' : 'inline-endif-bugfix' }
 Plug 'terryma/vim-expand-region'
 Plug 'vim-scripts/matchit.zip'
 Plug 'pbrisbin/vim-mkdir'
