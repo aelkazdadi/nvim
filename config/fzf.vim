@@ -33,7 +33,6 @@ let g:fzf_action = {
       \ 'ctrl-t': 'tab split',
       \ 'ctrl-s': 'split',
       \ 'ctrl-v': 'vsplit' }
-let g:skim_action = g:fzf_action
 
 " Insert mode completion
 imap <c-x><c-f> <plug>(fzf-complete-path)
@@ -58,7 +57,7 @@ let g:n_which_key_map.g.C = 'commits-current-file'
 
 augroup FzfMappings
   autocmd!
-  autocmd FileType fzf,skim
+  autocmd FileType fzf
         \ tnoremap <buffer> <c-h> <c-h>|
         \ tnoremap <buffer> <c-j> <c-j>|
         \ tnoremap <buffer> <c-k> <c-k>|

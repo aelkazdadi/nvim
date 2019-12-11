@@ -79,7 +79,7 @@ Plug 'tpope/vim-surround'
 Plug 'lervag/vimtex'
 Plug 'simeji/winresizer'
 Plug 'SirVer/ultisnips'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc' }
+Plug 'junegunn/fzf', { 'dir': '~/.local/share/fzf', 'do': './install --all --no-update-rc' }
 Plug 'junegunn/fzf.vim'
 Plug 'machakann/vim-highlightedyank'
 Plug 'mhinz/vim-signify'
@@ -113,9 +113,6 @@ let g:gruvbox_contrast_light = "soft"
 let g:gruvbox_contrast_dark = "medium"
 let g:gruvbox_improved_strings = 1
 let g:gruvbox_improved_warnings = 1
-
-" Skim
-set rtp+=$LOCAL_HOME/.local/share/skim
 
 let g:rainbow_active = 1
 augroup Rainbow
@@ -311,13 +308,15 @@ tnoremap <c-\> <c-\>
 
 tnoremap <silent> <c-space><space> <c-space>
 tnoremap <silent> <c-space><c-space> <c-\><c-n>
+tnoremap <silent> <m-cr> <c-\><c-n>
+tnoremap <silent> <c-space><m-cr> <m-cr>
 tnoremap <silent> <c-space>h <c-h>
 tnoremap <silent> <c-space>j <c-j>
 tnoremap <silent> <c-space>k <c-k>
 tnoremap <silent> <c-space>l <c-l>
 
-nnoremap <silent> <c-space>o :call MaximizeWindow()<cr>
-tnoremap <silent> <c-space>o :call MaximizeWindow()<cr>
+nnoremap <silent> <c-space>o :tab split<cr>
+tnoremap <silent> <c-space>o <c-\><c-n>:tab split<cr>i
 
 " Vim
 let g:n_which_key_map.q = {}
