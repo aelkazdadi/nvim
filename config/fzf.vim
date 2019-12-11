@@ -4,7 +4,7 @@ nnoremap <silent> <leader>ff
       \ '--cycle', '--preview-window', 'right',
       \ '--bind=ctrl-a:select-all,ctrl-d:deselect-all',
       \ '--preview', $LOCAL_HOME .
-      \ '''/.local/share/nvim/plugged/skim.vim/bin/preview.sh'' {}']},
+      \ '''/.local/share/nvim/plugged/fzf.vim/bin/preview.sh'' {}']},
       \ 0)<cr>
 
 " nnoremap <silent> <leader>bb :Buffers<cr>
