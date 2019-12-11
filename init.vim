@@ -79,7 +79,7 @@ Plug 'tpope/vim-surround'
 Plug 'lervag/vimtex'
 Plug 'simeji/winresizer'
 Plug 'SirVer/ultisnips'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc' }
 Plug 'junegunn/fzf.vim'
 Plug 'machakann/vim-highlightedyank'
 Plug 'mhinz/vim-signify'
