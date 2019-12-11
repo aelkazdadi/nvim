@@ -1,19 +1,31 @@
 {
-  "diagnostic.displayByAle": true,
+  "diagnostic.displayByAle": false,
   "coc.preferences.previewAutoClose": false,
   "languageserver": {
-    "clangd": {
-      "command": "clangd",
-      "filetypes": ["c", "cpp", "objc", "objcpp"],
-      "args": ["--background-index", "--completion-style=detailed", "--pch-storage=memory"],
-      "rootPatterns": [".clangd", "compile_flags.txt", "compile_commands.json", ".vim/", ".git/", ".hg/"],
+    "ccls": {
+      "command": "ccls",
+      "filetypes": [
+        "c",
+        "cpp",
+      ],
+      "rootPatterns": [
+        ".ccls-root",
+        ".ccls",
+        "compile_commands.json",
+        ".vim/",
+        ".git/",
+        ".hg/"
+      ],
       "initializationOptions": {
         "cache": {
-          "directory": "/tmp/clangd-cache"
+          "directory": "/tmp/ccls-cache"
+        },
+        "highlight": {
+          "lsRanges": true
         }
       }
     }
   },
-  "python.jediEnabled":false,
+  "python.jediEnabled": false,
   "python.formatting.provider": "black"
 }
