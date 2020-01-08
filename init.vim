@@ -105,6 +105,7 @@ Plug 'blueyed/vim-diminactive'
 Plug 'kshenoy/vim-signature'
 Plug 'mbbill/undotree'
 Plug 'wellle/targets.vim'
+Plug 'liuchengxu/vista.vim'
 Plug 'liuchengxu/vim-clap', { 'do': function('clap#helper#build_all') }
 call plug#end()
 

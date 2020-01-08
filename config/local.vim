@@ -107,6 +107,9 @@ function! CocMapInit()
 
   let g:n_which_key_maplocal[&filetype]['<M-r>'] = 'restart-lsp'
   nnoremap <buffer><silent> <localleader><m-r> :CocRestart<cr>
+
+  let g:n_which_key_maplocal[&filetype]['<Space>'] = 'symbols'
+  nnoremap <buffer><silent> <localleader><space> :Vista coc<cr>
 endfunction
 
 augroup LocalLeaderInit
