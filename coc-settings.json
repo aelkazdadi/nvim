@@ -2,23 +2,26 @@
   "diagnostic.displayByAle": false,
   "coc.preferences.previewAutoClose": false,
   "languageserver": {
-    "ccls": {
-      "command": "ccls",
+    "clangd": {
+      "command": "clangd",
       "filetypes": [
         "c",
+        "cc",
         "cpp",
+        "h",
+        "hpp",
+        "hxx"
       ],
       "rootPatterns": [
-        ".ccls-root",
-        ".ccls",
+        ".clangd-root",
+        ".clangd",
         "compile_commands.json",
-        ".vim/",
         ".git/",
         ".hg/"
       ],
       "initializationOptions": {
         "cache": {
-          "directory": "/tmp/ccls-cache"
+          "directory": ".clangd-cache"
         },
         "highlight": {
           "lsRanges": true
