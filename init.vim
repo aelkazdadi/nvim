@@ -12,6 +12,7 @@ set undofile
 map Q gq
 
 let &guicursor='a:block-blinkon0'
+let &guifont='Inconsolata Nerd Font:h10'
 set mouse=n               " Disable mouse support
 set expandtab             " Expand TABs to spaces
 
