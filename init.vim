@@ -154,8 +154,8 @@ let g:targets_seekRanges = 'cc cr cb cB lc ac Ac lr lb ar ab lB Ar aB Ab AB rr l
 let g:airline#extensions#ale#enabled = 1
 let g:ale_virtualtext_cursor=1
 let g:ale_sign_column_always = 1
-map ]q <plug>(ale_next)
-map [q <plug>(ale_previous)
+map ]q <plug>(coc-diagnostic-next)
+map [q <plug>(coc-diagnostic-prev)
 
 " Vim visual star search
 function! SearchSelection()
