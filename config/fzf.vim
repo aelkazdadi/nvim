@@ -1,3 +1,5 @@
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6, 'highlight': 'Todo', 'rounded': v:false } }
+
 " Fuzzy find files in the working directory
 nnoremap <silent> <leader>ff
       \ :call fzf#vim#files('', {'options': [
