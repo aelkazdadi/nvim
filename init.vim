@@ -107,7 +107,6 @@ Plug 'kshenoy/vim-signature'
 Plug 'mbbill/undotree'
 Plug 'wellle/targets.vim'
 Plug 'liuchengxu/vista.vim'
-Plug 'liuchengxu/vim-clap', { 'do': function('clap#helper#build_all') }
 call plug#end()
 
 "Gruvbox
@@ -186,7 +185,6 @@ call s:Source('config/local.vim')
 call s:Source('config/buffers.vim')
 call s:Source('config/tabs.vim')
 call s:Source('config/terminal.vim')
-call s:Source('config/clap.vim')
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Other User Config                              "
@@ -331,7 +329,7 @@ nnoremap <silent> <leader>qq
       \ if tolower(nr2char(getchar())) == 'y' <bar>
       \ qa <bar> else <bar> echo '' <bar> endif<cr>
 nnoremap <silent> <leader>qe :execute 'lcd ' . g:config_dir . '<bar> edit init.vim'<cr>
-nnoremap <silent> <leader>qf :execute 'Clap files ' . g:config_dir<cr>
+nnoremap <silent> <leader>qf :execute 'Files ' . g:config_dir<cr>
 let g:n_which_key_map.q.q = 'quit'
 let g:n_which_key_map.q.e = 'init-file'
 let g:n_which_key_map.q.f = 'config-files'
