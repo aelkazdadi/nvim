@@ -101,7 +101,6 @@ Plug 'terryma/vim-expand-region'
 Plug 'vim-scripts/matchit.zip'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'dbakker/vim-projectroot'
-Plug 'enricobacis/vim-airline-clock'
 Plug 'blueyed/vim-diminactive'
 Plug 'kshenoy/vim-signature'
 Plug 'mbbill/undotree'
@@ -131,6 +130,8 @@ let g:winresizer_start_key='<c-space>.'
 
 " Airline
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#hunks#enabled=0
+let g:airline#extensions#branch#enabled=0
 
 " Python syntax
 let g:python_highlight_all = 1
@@ -169,10 +170,6 @@ function! SearchSelection()
 endfunction
 xnoremap <silent> * <esc>:call SearchSelection()<cr>/<c-r>/<cr>
 xnoremap <silent> # <esc>:call SearchSelection()<cr>?<c-r>/<cr>
-
-
-let g:airline#extensions#clock#updatetime = 5000
-let g:airline#extensions#clock#format = '%H:%M'
 
 call s:Source('config/which_key.vim')
 call s:Source('config/ultisnips.vim')
