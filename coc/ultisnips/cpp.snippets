@@ -1,16 +1,23 @@
-extends c
 priority -39
 
 snippet incc "include system"
-#include <${0:${VISUAL:iostream}}>
+#include <${1:iostream}>
+${0}
 endsnippet
 
 snippet inc "include local"
-#include "${0:${VISUAL}}"
+#include "${1:${VISUAL}}"
+${0}
 endsnippet
 
-snippet fore "for loop (container)"
+snippet fore "ranged for"
 for (const auto& ${1:e} : ${2:container}) {
+	${VISUAL}$0
+}
+endsnippet
+
+snippet foree "forwarding ranged for"
+for (auto&& ${1:e} : ${2:container}) {
 	${VISUAL}$0
 }
 endsnippet
@@ -40,7 +47,7 @@ std::cout << ${VISUAL}$0 << '\n';
 endsnippet
 
 snippet fmt "print to stdout (fmtlib)"
-fmt::print("${VISUAL}$1\n"$0);
+fmt::print("${1:\{\}}\n", ${2:${VISUAL}});
 endsnippet
 
 snippet sca "static cast" i
@@ -63,13 +70,13 @@ endsnippet
 snippet mainn "main (no args)" b
 int main()
 {
-  $0
+	$0
 }
 endsnippet
 
 snippet main "main" b
 int main(int argc, char *argv[])
 {
-  $0
+	$0
 }
 endsnippet

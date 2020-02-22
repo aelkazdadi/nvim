@@ -79,7 +79,6 @@ Plug 'honza/vim-snippets'
 Plug 'tpope/vim-surround'
 Plug 'lervag/vimtex'
 Plug 'simeji/winresizer'
-Plug 'SirVer/ultisnips'
 Plug 'junegunn/fzf', { 'dir': '~/.local/share/fzf', 'do': './install --all --no-update-rc' }
 Plug 'junegunn/fzf.vim'
 Plug 'machakann/vim-highlightedyank'
@@ -172,7 +171,7 @@ xnoremap <silent> * <esc>:call SearchSelection()<cr>/<c-r>/<cr>
 xnoremap <silent> # <esc>:call SearchSelection()<cr>?<c-r>/<cr>
 
 call s:Source('config/which_key.vim')
-call s:Source('config/ultisnips.vim')
+call s:Source('config/snippets.vim')
 call s:Source('config/vimtex.vim')
 call s:Source('config/fzf.vim')
 call s:Source('config/git.vim')
