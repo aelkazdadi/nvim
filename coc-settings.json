@@ -1,4 +1,10 @@
 {
+  "snippets.userSnippetsDirectory": "$VIMCONFIG/Ultisnips",
+  "snippets.extends": {
+    "cpp": [
+      "c"
+    ],
+  },
   "diagnostic.displayByAle": false,
   "coc.preferences.previewAutoClose": false,
   "languageserver": {
