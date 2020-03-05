@@ -36,5 +36,5 @@
     }
   },
   "python.jediEnabled": false,
-  "python.formatting.provider": "black"
+  "python.formatting.provider": "black",
 }
