@@ -11,8 +11,8 @@ set undofile
 " Don't use Ex mode, use Q for formatting
 map Q gq
 
-let &guicursor='a:block-blinkon0'
-let &guifont='FiraCode Nerd Font Retina:h8:w2'
+let &guifont='FiraCode Nerd Font Retina:h11'
+let g:neovide_cursor_vfx_mode = "ripple"
 
 set mouse=n               " Disable mouse support
 set expandtab             " Expand TABs to spaces
