@@ -9,3 +9,6 @@ let b:ale_fixers = [
 
 let g:ale_cpp_clangtidy_checks=['-*'
       \]
+
+nmap <silent> ]q <plug>(coc-diagnostic-next)
+nmap <silent> [q <plug>(coc-diagnostic-prev)

@@ -11,5 +11,5 @@ let b:ale_fixers = [
 let g:ale_cpp_clangtidy_checks=['-*'
       \]
 
-map ]q <plug>(coc-diagnostic-next)
-map [q <plug>(coc-diagnostic-prev)
+nmap <silent> ]q <plug>(coc-diagnostic-next)
+nmap <silent> [q <plug>(coc-diagnostic-prev)
