@@ -321,6 +321,7 @@ tnoremap <silent> <c-space>t <c-\><c-n>:tabnew <bar> terminal<cr>
 
 tnoremap <c-\> <c-\><c-\>
 tnoremap <c-space><c-space> <c-space>
+tnoremap <c-space>l  <c-l>
 
 tnoremap <c-h>  <c-\><c-n><c-w>h
 tnoremap <c-j>  <c-\><c-n><c-w>j
@@ -339,7 +340,9 @@ tnoremap <c-space><m-p>  <m-p>
 tnoremap <c-space><m-P>  <m-P>
 
 " Fix <C-BS> for GUI vim
-tnoremap <c-bs> <bs>
+tnoremap <c-bs>   <bs>
+tnoremap <s-bs>   <bs>
+tnoremap <c-s-bs> <bs>
 
 nnoremap <silent> <c-space>o :tab split<cr>
 tnoremap <silent> <c-space>o <c-\><c-n>:tab split<cr>i
