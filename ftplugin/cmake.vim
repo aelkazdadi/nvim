@@ -2,10 +2,11 @@ setlocal foldmethod=syntax
 let b:ale_fixers = [
       \   'cmakeformat',
       \ ]
-
-nmap <buffer><silent> <localleader><cr> \let __tmp__ = line('.')<cr>oeigen<c-s><cr>fmt<c-s><cr><cr>san<c-s><cr><cr><c-u>warn<c-s><cr><esc>\<c-r>=__tmp__<cr><cr>iinit<c-s>
+let b:ale_cmake_cmakeformat_options = '-c .cmake-format.yaml -- '
 
 if !has_key(g:n_which_key_maplocal, &filetype)
   let g:n_which_key_maplocal['cmake'] = {}
 endif
-let g:n_which_key_maplocal['cmake']['<CR>'] = 'generate'
+let g:n_which_key_maplocal[&filetype].q = 'format'
+
+nnoremap <buffer><silent> ,q :ALEFix<cr>
