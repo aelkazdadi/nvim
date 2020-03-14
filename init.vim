@@ -210,10 +210,11 @@ endfunction
 map <expr> <F2> ChangeTheme()
 
 " Disable search highlighting
-nnoremap <silent> <M-.> :nohlsearch <bar> echo<cr>
-vnoremap <silent> <M-.> :<c-u>nohlsearch <bar> echo<cr>gv
-inoremap <silent> <M-.> <c-o>:nohlsearch <bar> echo<cr>
-tnoremap <silent> <M-.> <c-\><c-n>:nohlsearch <bar> echo<cr>i
+nnoremap <silent> <m-.> :nohlsearch <bar> echo<cr>
+vnoremap <silent> <m-.> :<c-u>nohlsearch <bar> echo<cr>gv
+inoremap <silent> <m-.> <c-o>:nohlsearch <bar> echo<cr>
+tnoremap <silent> <m-.> <c-\><c-n>:nohlsearch <bar> echo<cr>i
+tnoremap <silent> <c-space><m-.> <m-.>
 
 nnoremap <leader><tab> <c-^>
 let g:n_which_key_map['<Tab>'] = 'alternate-buffer'
@@ -304,20 +305,27 @@ tnoremap <silent> <c-space>v <c-\><c-n>:vsplit <bar> terminal<cr>
 tnoremap <silent> <c-space>s <c-\><c-n>:split  <bar> terminal<cr>
 tnoremap <silent> <c-space>t <c-\><c-n>:tabnew <bar> terminal<cr>
 
-tnoremap <silent> <c-h> <c-\><c-n><c-w>h
-tnoremap <silent> <c-j> <c-\><c-n><c-w>j
-tnoremap <silent> <c-k> <c-\><c-n><c-w>k
-tnoremap <silent> <c-l> <c-\><c-n><c-w>l
-tnoremap <c-\> <c-\>
+tnoremap <c-\> <c-\><c-\>
+tnoremap <c-space><c-space> <c-space>
 
-tnoremap <silent> <c-space><space> <c-space>
-tnoremap <silent> <c-space><c-space> <c-\><c-n>
-tnoremap <silent> <m-cr> <c-\><c-n>
-tnoremap <silent> <c-space><m-cr> <m-cr>
-tnoremap <silent> <c-space>h <c-h>
-tnoremap <silent> <c-space>j <c-j>
-tnoremap <silent> <c-space>k <c-k>
-tnoremap <silent> <c-space>l <c-l>
+tnoremap <c-h>  <c-\><c-n><c-w>h
+tnoremap <c-j>  <c-\><c-n><c-w>j
+tnoremap <c-k>  <c-\><c-n><c-w>k
+tnoremap <c-l>  <c-\><c-n><c-w>l
+tnoremap <m-cr> <c-\><c-n>
+tnoremap <m-p>  <c-\><c-n>"+pa
+tnoremap <m-P>  <c-\><c-n>pa
+
+tnoremap <c-space><c-h>  <c-h>
+tnoremap <c-space><c-j>  <c-j>
+tnoremap <c-space><c-k>  <c-k>
+tnoremap <c-space><c-l>  <c-l>
+tnoremap <c-space><m-cr> <m-cr>
+tnoremap <c-space><m-p>  <m-p>
+tnoremap <c-space><m-P>  <m-P>
+
+" Fix <C-BS> for GUI vim
+tnoremap <c-bs> <bs>
 
 nnoremap <silent> <c-space>o :tab split<cr>
 tnoremap <silent> <c-space>o <c-\><c-n>:tab split<cr>i
