@@ -16,15 +16,15 @@ nnoremap <c-space>n gt
 nnoremap <c-space>p gT
 
 " Navigate tabs
-nnoremap <c-space>1 <c-\><c-n>1gt
-nnoremap <c-space>2 <c-\><c-n>2gt
-nnoremap <c-space>3 <c-\><c-n>3gt
-nnoremap <c-space>4 <c-\><c-n>4gt
-nnoremap <c-space>5 <c-\><c-n>5gt
-nnoremap <c-space>6 <c-\><c-n>6gt
-nnoremap <c-space>7 <c-\><c-n>7gt
-nnoremap <c-space>8 <c-\><c-n>8gt
-nnoremap <c-space>9 <c-\><c-n>9gt
+nnoremap <c-space>1 1gt
+nnoremap <c-space>2 2gt
+nnoremap <c-space>3 3gt
+nnoremap <c-space>4 4gt
+nnoremap <c-space>5 5gt
+nnoremap <c-space>6 6gt
+nnoremap <c-space>7 7gt
+nnoremap <c-space>8 8gt
+nnoremap <c-space>9 9gt
 
 " Next/previous tab
 tnoremap <c-space>n <c-\><c-n>gt
