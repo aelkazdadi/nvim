@@ -254,6 +254,7 @@ set splitbelow
 " Copy/Paste
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
+nnoremap Y y$
 
 vnoremap P pgvy`>
 nnoremap <m-p> "+p
