@@ -228,6 +228,9 @@ cnoremap <c-j> <down>
 cnoremap <c-k> <up>
 cnoremap <c-l> <right>
 
+cnoremap <m-h> <left><left>
+cnoremap <m-l> <right><right>
+
 cnoremap <c-a> <c-b>
 cnoremap <c-e> <c-e>
 
