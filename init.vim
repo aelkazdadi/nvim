@@ -223,6 +223,18 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 cnoremap <c-p> <up>
 cnoremap <c-n> <down>
 
+cnoremap <c-h> <left>
+cnoremap <c-j> <down>
+cnoremap <c-k> <up>
+cnoremap <c-l> <right>
+
+cnoremap <c-a> <c-b>
+cnoremap <c-e> <c-e>
+
+cnoremap (( \(\)<left><left>
+cnoremap !! \@!
+cnoremap <bar><bar><bar> \(\<bar>\)<left><left><left><left>
+
 noremap : ,
 noremap \ :
 
@@ -277,8 +289,6 @@ augroup end
 " Help in vertical split
 cnoreabbrev h tab help
 cnoreabbrev hh help
-
-cnoreabbre \( \(\)<left><left>
 
 " Windows
 let g:n_which_key_map_ctrl['.'] = 'window-resizer'
