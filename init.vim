@@ -170,7 +170,7 @@ function! SearchSelection()
   let @/ = substitute(@", '\\', '\\\\', 'g')
   let @/ = substitute(@/, '\/', '\\\/', 'g')
   let @/ = substitute(@/, '\n', '\\n', 'g')
-  let @/ = '\V' . @/
+  let @/ = '\C\V' . @/
   let @" = temp
 endfunction
 xnoremap <silent> * <esc>:call SearchSelection()<cr>/<c-r>/<cr>
