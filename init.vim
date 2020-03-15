@@ -315,6 +315,7 @@ nnoremap <silent> <c-space>q :bdelete<cr>
 nnoremap <silent> <c-space>Q :bdelete!<cr>
 nnoremap <silent> <c-space>= <c-w>=
 nnoremap <silent> <c-space><c-space> :terminal<cr>
+nnoremap <silent> <m-cr> :terminal<cr>
 
 nnoremap <silent> <c-space>v :vsplit <bar> terminal<cr>
 nnoremap <silent> <c-space>s :split  <bar> terminal<cr>
