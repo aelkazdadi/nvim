@@ -56,6 +56,10 @@ function! s:Source(fname)
   execute 'source ' . g:config_dir . '/' . a:fname
 endfunction
 
+if $ZDOTDIR == ''
+  call s:Source('config/pre-config.vim')
+endif
+
 " Vim Plug
 set rtp+=$LOCAL_HOME/.local/share/nvim
 call plug#begin('~/.local/share/nvim/plugged')
