@@ -65,7 +65,7 @@ function! s:Source(fname)
   execute 'source ' . g:config_dir . '/' . a:fname
 endfunction
 
-if $ZDOTDIR == ''
+if $ZDOTDIR == '' or $LOCAL_HOME == ''
   call s:Source('config/pre-config.vim')
 endif
 
