@@ -119,7 +119,14 @@ Plug 'kshenoy/vim-signature'
 Plug 'mbbill/undotree'
 Plug 'wellle/targets.vim'
 Plug 'liuchengxu/vista.vim'
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 call plug#end()
+
+" All possible highlighters
+let g:Hexokinase_highlighters = [
+\   'virtual',
+\   'foreground',
+\ ]
 
 "Gruvbox
 let g:gruvbox_italic = 1
