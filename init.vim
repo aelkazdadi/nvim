@@ -52,6 +52,15 @@ noremap <localleader> <nop>
 "                                  Plugins                                   "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:config_dir = expand('<sfile>:p:h')
+
+function! SourceRange() range
+  let tmpsofile = tempname()
+  call writefile(getline(a:firstline, a:lastline), l:tmpsofile)
+  execute "source " . l:tmpsofile
+  call delete(l:tmpsofile)
+endfunction
+command! -range Source <line1>,<line2>call SourceRange()
+
 function! s:Source(fname)
   execute 'source ' . g:config_dir . '/' . a:fname
 endfunction
@@ -177,8 +186,11 @@ function! SearchSelection()
   let @/ = '\C\V' . @/
   let @" = temp
 endfunction
-xnoremap <silent> * <esc>:call SearchSelection()<cr>/<c-r>/<cr>
-xnoremap <silent> # <esc>:call SearchSelection()<cr>?<c-r>/<cr>
+nnoremap <silent> * :let @/ = '\<'.expand('<cword>').'\>' <bar> let v:searchforward=1 <bar> set hlsearch<cr>
+nnoremap <silent> # :let @/ = '\<'.expand('<cword>').'\>' <bar> let v:searchforward=0 <bar> set hlsearch<cr>
+
+xnoremap <silent> * <esc>:call SearchSelection() <bar> let v:searchforward=1 <bar> set hlsearch<cr>
+xnoremap <silent> # <esc>:call SearchSelection() <bar> let v:searchforward=0 <bar> set hlsearch<cr>
 
 call s:Source('config/which_key.vim')
 call s:Source('config/snippets.vim')
@@ -240,6 +252,7 @@ cnoremap <c-e> <c-e>
 
 cnoremap (( \(\)<left><left>
 cnoremap !! \@!
+cnoremap ** \{-}
 cnoremap <bar><bar><bar> \(\<bar>\)<left><left><left><left>
 
 noremap : ,
