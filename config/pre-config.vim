@@ -1,5 +1,5 @@
 let $ZDOTDIR = $HOME . '/.local/share/zsh'
-let $LOCAL_HOME = system("source $ZDOTDIR/.zshrc && printf $LOCAL_HOME")
+let $LOCAL_HOME = system("zsh -c 'source $ZDOTDIR/.zshrc && printf $LOCAL_HOME'")
 cd $LOCAL_HOME
 
 let $FZF_DEFAULT_COMMAND = system
