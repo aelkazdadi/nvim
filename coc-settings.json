@@ -1,5 +1,6 @@
 {
   "snippets.userSnippetsDirectory": "$VIMCONFIG/Ultisnips",
+  "snippets.loadFromExtensions": false,
   "snippets.extends": {
     "cpp": [
       "c"

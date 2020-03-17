@@ -3,13 +3,11 @@ priority -40
 clearsnippets forr
 
 snippet incc "include system"
-#include <${1:stdio}.h>
-${0}
+#include <${1:stdio}.h>${0}
 endsnippet
 
 snippet for "for loop (for)"
-for (${1:long} ${2:i} = 0; $2 < ${3:count}; ${4:++$2})
-{
+for (${1:long} ${2:i} = 0; $2 < ${3:count}; ${4:++$2}) {
 	${VISUAL}$0
 }
 endsnippet
@@ -18,7 +16,7 @@ snippet once "Include header once only guard"
 #ifndef ${1:`!p
 if not snip.c:
 	import random, string
-	name = re.sub(r'[^A-Za-z0-9]+','_', path).upper()
+	name = re.sub(r'[^A-Za-z0-9]+','_', vim.command_output("echo expand('%')")).upper()
 	rand = ''.join(random.sample(string.ascii_letters+string.digits, 8))
 	snip.rv = ('%s_%s' % (name,rand)).upper()
 else:
