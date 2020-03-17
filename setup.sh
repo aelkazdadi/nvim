@@ -29,6 +29,6 @@ $VENV_DIR/venv/bin/pip install \
   toml\
   typed-ast\
   Unidecode\
-  wrapt=1.11\
+  wrapt==1.11\
   rope\
   jedi
