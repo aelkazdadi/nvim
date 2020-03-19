@@ -1,7 +1,3 @@
 setlocal foldmethod=syntax
-let b:ale_linters = [
-      \   'rls',
-      \]
-let b:ale_fixers = [
-      \   'rustfmt',
-      \]
+let b:ale_linters = []
+let b:ale_fixers = []
