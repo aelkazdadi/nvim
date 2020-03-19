@@ -3,8 +3,8 @@
 VENV_DIR="$LOCAL_HOME/.local/share/nvim"
 
 [ -d "$VENV_DIR/venv" ] || python3 -m venv --prompt='neovim' "$VENV_DIR/venv"
-$VENV_DIR/venv/bin/pip install wheel
-$VENV_DIR/venv/bin/pip install \
+$VENV_DIR/venv/bin/pip install -U wheel
+$VENV_DIR/venv/bin/pip install -U \
   scikit-build\
   pyyaml\
   appdirs\
@@ -31,4 +31,6 @@ $VENV_DIR/venv/bin/pip install \
   Unidecode\
   wrapt==1.11\
   rope\
-  jedi
+  jedi\
+  cmake-format\
+  pyyaml\
