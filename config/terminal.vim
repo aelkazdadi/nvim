@@ -28,7 +28,7 @@ function! s:TermOpenCall(buf)
     startinsert
     call s:TermEnter()
   endif
-  augroup TermGroup
+  augroup TermGroupOnClose
     autocmd TermClose <buffer> call s:TermCloseCall(expand('<abuf>'))
   augroup end
 endfunction
