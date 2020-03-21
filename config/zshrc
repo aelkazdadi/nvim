@@ -9,8 +9,7 @@ unalias e >/dev/null 2>&1
 
 alias nv-reset="python3 $VIMCONFIG/config/shell.py reset && exit"
 
-function cd() {
-  HOME=$LOCAL_HOME builtin cd "$@"
+function chpwd() {
   python3 $VIMCONFIG/config/shell.py lcd
 }
 
