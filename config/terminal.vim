@@ -30,9 +30,14 @@ function! s:TermOpenCall(buf)
     startinsert
     call s:TermEnter()
   endif
-  augroup TermGroupOnClose
+  augroup TermGroupExtra
     autocmd TermClose <buffer> call s:TermCloseCall(expand('<abuf>'))
   augroup end
+  if &filetype == 'fzf'
+    augroup TermGroupExtra
+      autocmd!
+    augroup end
+  endif
 endfunction
 
 function! s:TermCloseCall(buf)
@@ -58,4 +63,8 @@ augroup TermGroup
   autocmd TermOpen * call s:TermOpenCall(expand('<abuf>'))
   autocmd WinEnter,BufEnter term://* call s:TermEnter()
   autocmd WinLeave,BufLeave term://* echo | let g:n_which_key_map_ctrl['<C-Space>'] = 'term-current-split'
+augroup end
+
+augroup FzfGroup
+  autocmd! FileType fzf call s:TermOpenCall(expand('<abuf>'))
 augroup end
