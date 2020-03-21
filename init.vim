@@ -179,6 +179,7 @@ let g:targets_seekRanges = 'cc cr cb cB lc ac Ac lr lb ar ab lB Ar aB Ab AB rr l
 let g:airline#extensions#ale#enabled = 1
 let g:ale_virtualtext_cursor=1
 let g:ale_sign_column_always = 1
+let g:ale_linters_explicit = 1
 nmap <silent> ]q <plug>(coc-diagnostic-next)
 nmap <silent> [q <plug>(coc-diagnostic-prev)
 
@@ -351,17 +352,17 @@ tnoremap <c-h>  <c-\><c-n><c-w>h
 tnoremap <c-j>  <c-\><c-n><c-w>j
 tnoremap <c-k>  <c-\><c-n><c-w>k
 tnoremap <c-l>  <c-\><c-n><c-w>l
-tnoremap <m-cr> <c-\><c-n>
+tnoremap <m-q> <c-\><c-n>
 tnoremap <m-p>  <c-\><c-n>"+pa
 tnoremap <m-P>  <c-\><c-n>pa
 
-tnoremap <c-space><c-h>  <c-h>
-tnoremap <c-space><c-j>  <c-j>
-tnoremap <c-space><c-k>  <c-k>
-tnoremap <c-space><c-l>  <c-l>
-tnoremap <c-space><m-cr> <m-cr>
-tnoremap <c-space><m-p>  <m-p>
-tnoremap <c-space><m-P>  <m-P>
+tnoremap <c-space><c-h> <c-h>
+tnoremap <c-space><c-j> <c-j>
+tnoremap <c-space><c-k> <c-k>
+tnoremap <c-space><c-l> <c-l>
+tnoremap <c-space><m-q> <m-q>
+tnoremap <c-space><m-p> <m-p>
+tnoremap <c-space><m-P> <m-P>
 
 " Fix <C-BS> for GUI vim
 tnoremap <c-bs>   <bs>

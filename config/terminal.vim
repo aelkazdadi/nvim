@@ -23,6 +23,8 @@ if $SHELL == '/usr/bin/bash'
   let &shell = $SHELL . ' --rcfile ' . g:config_dir . '/config/termrc'
 endif
 
+let &scrollback = 100000
+
 function! s:TermOpenCall(buf)
   if a:buf == bufnr('%')
     startinsert
@@ -57,11 +59,3 @@ augroup TermGroup
   autocmd WinEnter,BufEnter term://* call s:TermEnter()
   autocmd WinLeave,BufLeave term://* echo | let g:n_which_key_map_ctrl['<C-Space>'] = 'term-current-split'
 augroup end
-
-function <SID>ReplaceTerm()
-  let nr = bufnr()
-  terminal
-  call CloseBuffer(nr, 1)
-endfunction
-
-tnoremap <m-bs> <c-\><c-n>:call <SID>ReplaceTerm()<cr>
