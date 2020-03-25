@@ -35,7 +35,7 @@ function! s:TermOpenCall(buf)
   augroup end
   if &filetype == 'fzf'
     augroup TermGroupExtra
-      autocmd!
+      autocmd! * <buffer>
     augroup end
   endif
 endfunction
