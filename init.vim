@@ -12,6 +12,7 @@ set undofile
 map Q gq
 " Disable alt-tab (reserved for system window manager)
 noremap  <m-tab> <nop>
+inoremap <m-tab> <nop>
 lnoremap <m-tab> <nop>
 xnoremap <m-tab> <nop>
 cnoremap <m-tab> <nop>
