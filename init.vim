@@ -96,6 +96,8 @@ Plug 'lifepillar/vim-solarized8'
 " Plugins
 Plug 'neoclide/coc.nvim', { 'branch' : 'master' }
 Plug 'w0rp/ale'
+Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-commentary'
 Plug 'ervandew/supertab'
 Plug 'tpope/vim-repeat'
