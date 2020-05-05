@@ -341,15 +341,15 @@ nnoremap <silent> <c-space>D :tabclose<cr>
 nnoremap <silent> <c-space>q :bdelete<cr>
 nnoremap <silent> <c-space>Q :bdelete!<cr>
 nnoremap <silent> <c-space>= <c-w>=
-nnoremap <silent> <c-space><c-space> :terminal<cr>
-nnoremap <silent> <m-cr> :terminal<cr>
+nnoremap <silent> <c-space><c-space> :terminal screen -q<cr>
+nnoremap <silent> <m-cr> :terminal screen -q<cr>
 
-nnoremap <silent> <c-space>v :vsplit <bar> terminal<cr>
-nnoremap <silent> <c-space>s :split  <bar> terminal<cr>
-nnoremap <silent> <c-space>t :tabnew <bar> terminal<cr>
-tnoremap <silent> <c-space>v <c-\><c-n>:vsplit <bar> terminal<cr>
-tnoremap <silent> <c-space>s <c-\><c-n>:split  <bar> terminal<cr>
-tnoremap <silent> <c-space>t <c-\><c-n>:tabnew <bar> terminal<cr>
+nnoremap <silent> <c-space>v :vsplit <bar> terminal screen -q<cr>
+nnoremap <silent> <c-space>s :split  <bar> terminal screen -q<cr>
+nnoremap <silent> <c-space>t :tabnew <bar> terminal screen -q<cr>
+tnoremap <silent> <c-space>v <c-\><c-n>:vsplit <bar> terminal screen -q<cr>
+tnoremap <silent> <c-space>s <c-\><c-n>:split  <bar> terminal screen -q<cr>
+tnoremap <silent> <c-space>t <c-\><c-n>:tabnew <bar> terminal screen -q<cr>
 
 tnoremap <c-\> <c-\><c-\>
 tnoremap <c-space><c-space> <c-space>
