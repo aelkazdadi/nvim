@@ -10,6 +10,11 @@ set undofile
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
+
+" Bugfix for altgr key modifiers
+inoremap <M-×> ×
+inoremap <M-á> á
+inoremap <M-é> é
 " Disable alt-tab (reserved for system window manager)
 noremap  <m-tab> <nop>
 inoremap <m-tab> <nop>
