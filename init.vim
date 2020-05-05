@@ -141,6 +141,10 @@ let g:Hexokinase_highlighters = [
 \   'foreground',
 \ ]
 
+" Indent guides
+let g:indentLine_char = '¦'
+let g:indent_blankline_char_list = extend(['↴'], repeat(['¦'], 9))
+
 "Gruvbox
 let g:gruvbox_italic = 1
 let g:gruvbox_contrast_light = "soft"
