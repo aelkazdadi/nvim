@@ -8,7 +8,7 @@ endfunction
 
 function s:HideBufferWindow(bufnr)
   if bufnr('') == a:bufnr
-    edit /tmp/__scratch__
+    edit /dev/null
   endif
 endfunction
 
@@ -22,7 +22,7 @@ function CloseBuffer(bufnr, force)
   else
     let bufnr = a:bufnr
   endif
-  if bufname(bufnr) == '/tmp/__scratch__'
+  if bufname(bufnr) == '/dev/null'
     return
   endif
   let win_id = win_getid()
@@ -97,8 +97,8 @@ let g:n_which_key_map.b.Q = 'force delete'
 
 " Scratch buffer
 augroup ScratchBuf
-  autocmd VimEnter * if bufname('%') == '' | edit /tmp/__scratch__ | else | badd /tmp/__scratch__ | endif
-        \ | call setbufvar('/tmp/__scratch__', '&buftype', 'nofile')
-        \ | call setbufvar('/tmp/__scratch__', '&bufhidden', 'hide')
-        \ | call setbufvar('/tmp/__scratch__', '&swapfile', 0)
+  autocmd VimEnter * if bufname('%') == '' | edit /dev/null | else | badd /dev/null | endif
+        \ | call setbufvar('/dev/null', '&buftype', 'nofile')
+        \ | call setbufvar('/dev/null', '&bufhidden', 'hide')
+        \ | call setbufvar('/dev/null', '&swapfile', 0)
 augroup end
