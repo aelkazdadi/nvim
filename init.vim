@@ -16,12 +16,12 @@ inoremap <M-×> ×
 inoremap <M-á> á
 inoremap <M-é> é
 " Disable alt-tab (reserved for system window manager)
-noremap  <m-tab> <nop>
-inoremap <m-tab> <nop>
-lnoremap <m-tab> <nop>
-xnoremap <m-tab> <nop>
-cnoremap <m-tab> <nop>
-tnoremap <m-tab> <nop>
+noremap  <m-tab> <F13>
+inoremap <m-tab> <up><down>
+lnoremap <m-tab> <F13>
+xnoremap <m-tab> <F13>
+cnoremap <m-tab> <up><down>
+tnoremap <m-tab> <c-\><c-n>i
 
 let &guifont='FiraCode Nerd Font Retina:h12'
 let g:neovide_cursor_vfx_mode = "ripple"
