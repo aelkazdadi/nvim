@@ -17,10 +17,10 @@ inoremap <M-á> á
 inoremap <M-é> é
 " Disable alt-tab (reserved for system window manager)
 noremap  <m-tab> <F13>
-inoremap <m-tab> <up><down>
+inoremap <m-tab> <c-o><esc>
 lnoremap <m-tab> <F13>
 xnoremap <m-tab> <F13>
-cnoremap <m-tab> <up><down>
+cnoremap <m-tab> <space><bs>
 tnoremap <m-tab> <c-\><c-n>i
 
 let &guifont='FiraCode Nerd Font:h12'
