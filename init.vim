@@ -23,7 +23,7 @@ xnoremap <m-tab> <F13>
 cnoremap <m-tab> <up><down>
 tnoremap <m-tab> <c-\><c-n>i
 
-let &guifont='FiraCode Nerd Font Retina:h12'
+let &guifont='FiraCode Nerd Font:h12'
 let g:neovide_cursor_vfx_mode = "ripple"
 
 set mouse=n               " Disable mouse support
@@ -386,6 +386,15 @@ tnoremap <c-space><m-P> <m-P>
 tnoremap <c-bs>   <bs>
 tnoremap <s-bs>   <bs>
 tnoremap <c-s-bs> <bs>
+
+if exists('g:neovide')
+  nnoremap <c-tab> gt
+  nnoremap <c-s-tab> gT
+  tnoremap <c-tab> <c-\><c-n>gt
+  tnoremap <c-s-tab> <c-\><c-n>gT
+  inoremap <c-tab> <esc>gt
+  inoremap <c-s-tab> <esc>gT
+endif
 
 nnoremap <silent> <c-space>o :tab split<cr>
 tnoremap <silent> <c-space>o <c-\><c-n>:tab split<cr>i
