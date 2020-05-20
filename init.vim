@@ -350,15 +350,15 @@ nnoremap <silent> <c-space>D :tabclose<cr>
 nnoremap <silent> <c-space>q :bdelete<cr>
 nnoremap <silent> <c-space>Q :bdelete!<cr>
 nnoremap <silent> <c-space>= <c-w>=
-nnoremap <silent> <c-space><c-space> :terminal tmux<cr>
-nnoremap <silent> <m-cr> :terminal tmux<cr>
+nnoremap <silent> <c-space><c-space> :terminal<cr>
+nnoremap <silent> <m-cr> :terminal<cr>
 
-nnoremap <silent> <c-space>v :vsplit <bar> terminal tmux<cr>
-nnoremap <silent> <c-space>s :split  <bar> terminal tmux<cr>
-nnoremap <silent> <c-space>t :tabnew <bar> terminal tmux<cr>
-tnoremap <silent> <c-space>v <c-\><c-n>:vsplit <bar> terminal tmux<cr>
-tnoremap <silent> <c-space>s <c-\><c-n>:split  <bar> terminal tmux<cr>
-tnoremap <silent> <c-space>t <c-\><c-n>:tabnew <bar> terminal tmux<cr>
+nnoremap <silent> <c-space>v :vsplit <bar> terminal<cr>
+nnoremap <silent> <c-space>s :split  <bar> terminal<cr>
+nnoremap <silent> <c-space>t :tabnew <bar> terminal<cr>
+tnoremap <silent> <c-space>v <c-\><c-n>:vsplit <bar> terminal<cr>
+tnoremap <silent> <c-space>s <c-\><c-n>:split  <bar> terminal<cr>
+tnoremap <silent> <c-space>t <c-\><c-n>:tabnew <bar> terminal<cr>
 
 tnoremap <c-\> <c-\><c-\>
 tnoremap <c-space><c-space> <c-space>
