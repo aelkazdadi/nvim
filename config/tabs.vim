@@ -40,3 +40,39 @@ tnoremap <c-space>6 <c-\><c-n>6gt
 tnoremap <c-space>7 <c-\><c-n>7gt
 tnoremap <c-space>8 <c-\><c-n>8gt
 tnoremap <c-space>9 <c-\><c-n>9gt
+
+function! Tab_move(n)
+  try
+    execute "tabmove " . a:n
+  catch /^Vim\%((\a\+)\)\=:E474/
+  endtry
+endfunction
+
+if exists('g:neovide')
+  nnoremap <c-tab> gt
+  inoremap <c-tab> <esc>gt
+  tnoremap <c-tab> <c-\><c-n>gt
+
+  nnoremap <c-s-tab> gT
+  inoremap <c-s-tab> <esc>gT
+  tnoremap <c-s-tab> <c-\><c-n>gT
+
+  nnoremap <c-pagedown> gt
+  inoremap <c-pagedown> <esc>gt
+  tnoremap <c-pagedown> <c-\><c-n>gt
+
+  nnoremap <c-pageup> gT
+  inoremap <c-pageup> <esc>gT
+  tnoremap <c-pageup> <c-\><c-n>gT
+
+  nnoremap <silent> <c-s-pagedown> :call Tab_move("+1")<cr>
+  inoremap <silent> <c-s-pagedown> <c-o>:call Tab_move("+1")<cr>
+  tnoremap <silent> <c-s-pagedown> <c-\><c-n>:call Tab_move("+1")<cr>i
+
+  nnoremap <silent> <c-s-pageup> :call Tab_move("-1")<cr>
+  inoremap <silent> <c-s-pageup> <c-o>:call Tab_move("-1")<cr>
+  tnoremap <silent> <c-s-pageup> <c-\><c-n>:call Tab_move("-1")<cr>i
+endif
+
+nnoremap <silent> <c-space>o :tab split<cr>
+tnoremap <silent> <c-space>o <c-\><c-n>:tab split<cr>i

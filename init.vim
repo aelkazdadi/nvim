@@ -384,18 +384,6 @@ tnoremap <c-bs>   <bs>
 tnoremap <s-bs>   <bs>
 tnoremap <c-s-bs> <bs>
 
-if exists('g:neovide')
-  nnoremap <c-tab> gt
-  nnoremap <c-s-tab> gT
-  tnoremap <c-tab> <c-\><c-n>gt
-  tnoremap <c-s-tab> <c-\><c-n>gT
-  inoremap <c-tab> <esc>gt
-  inoremap <c-s-tab> <esc>gT
-endif
-
-nnoremap <silent> <c-space>o :tab split<cr>
-tnoremap <silent> <c-space>o <c-\><c-n>:tab split<cr>i
-
 " Vim
 let g:n_which_key_map.q = {}
 let g:n_which_key_map.q.name = '+vim'
