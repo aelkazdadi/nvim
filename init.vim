@@ -174,7 +174,6 @@ let g:python_highlight_all = 1
 " Tab completion direction
 let g:SuperTabDefaultCompletionType = '<c-n>'
 augroup SuperTabConfig
-  " this one is which you're most likely to use?
   autocmd VimEnter * imap <silent> <tab> <plug>SuperTabForward
   autocmd VimEnter * imap <silent> <s-tab> <plug>SuperTabBackward
 augroup end
