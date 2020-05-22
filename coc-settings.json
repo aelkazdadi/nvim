@@ -1,4 +1,6 @@
 {
+  "codeLens.enable":true,
+  "diagnostic.virtualText":true,
   "snippets.userSnippetsDirectory": "$VIMCONFIG/Ultisnips",
   "snippets.loadFromExtensions": false,
   "snippets.extends": {
