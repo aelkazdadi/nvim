@@ -246,42 +246,42 @@ endsnippet
 # Section
 snippet sec "\section"
 \\section{${1:section name}}%
-\\label{sec:${2:$1}}
+\\label{sec:${1/ /_/g}}
 ${0}
 endsnippet
 
 # Section without number
 snippet sec* "\section*"
 \\section*{${1:section name}}%
-\\label{sec:${2:$1}}
+\\label{sec:${1/ /_/g}}
 ${0}
 endsnippet
 
 # Sub Section
 snippet sub "\subsection"
 \\subsection{${1:subsection name}}%
-\\label{sub:${2:$1}}
+\\label{sub:${1/ /_/g}}
 ${0}
 # Sub Section without number
 endsnippet
 
 snippet sub* "\subsection*"
 \\subsection*{${1:subsection name}}%
-\\label{sub:${2:$1}}
+\\label{sub:${1/ /_/g}}
 ${0}
 # Sub Sub Section
 endsnippet
 
 snippet ssub "\subsubsection"
 \\subsubsection{${1:subsubsection name}}%
-\\label{ssub:${2:$1}}
+\\label{ssub:${1/ /_/g}}
 ${0}
 # Sub Sub Section without number
 endsnippet
 
 snippet ssub* "\subsubsection*"
 \\subsubsection*{${1:subsubsection name}}%
-\\label{ssub:${2:$1}}
+\\label{ssub:${1/ /_/g}}
 ${0}
 # Paragraph
 endsnippet
@@ -398,7 +398,7 @@ snippet rm "roman font text"
 endsnippet
 
 snippet tt "typewriter (monospace) text"
-\\texttt{${1:${VISUAL:text}}}${0}
+\\texttt{${t "typewriter (monospace) te1:${VISUAL:text}}}${0}
 endsnippet
 
 snippet tsub "subscripted text"
@@ -427,15 +427,13 @@ snippet ft "\footnote"
 \\footnote{${1:${VISUAL:text}}}${0}
 endsnippet
 
-snippet fig "figure environment (includegraphics)"
-\\begin{figure}
-\\begin{center}
-	\\includegraphics[scale=${1}]{Figures/${2}}
-\\end{center}
-\\caption{${3}}
-\\label{fig:${4}}
-\\end{figure}
-${0}
+snippet fig "Figure environment" b
+\begin{figure}[${2:htpb}]
+	\centering
+	\includegraphics[width=${3:0.8}\linewidth]{${4:name.ext}}
+	\caption{${4/(\w+)\.\w+/\u$1/}$0}%
+	\label{fig:${4/(\w+)\.\w+/$1/}}
+\end{figure}
 endsnippet
 
 snippet tikz "figure environment (tikzpicture)"

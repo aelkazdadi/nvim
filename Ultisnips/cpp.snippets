@@ -31,7 +31,7 @@ snippet { "brace block" i
 endsnippet
 
 snippet fore "ranged for"
-for (const auto& ${1:e} : ${2:container}) {
+for (auto const& ${1:e} : ${2:container}) {
 	${VISUAL}$0
 }
 endsnippet
@@ -111,19 +111,13 @@ snippet ld "lambda"
 endsnippet
 
 snippet once "header guards"
-#ifndef ${1:`!p
-if not snip.c:
-	import random, string
-	name = re.sub(r'[^A-Za-z0-9]+','_', vim.command_output("echo expand('%')")).upper()
-	rand = ''.join(random.sample(string.ascii_letters+string.digits, 8))
-	snip.rv = ('%s_%s' % (name,rand)).upper()
-else:
-	snip.rv = snip.c
-`}
-#define $1
-
-${VISUAL}$0
-#endif /* end of include guard: $1 */
+`!p
+import random, string
+name = re.sub(r"[^A-Za-z0-9]+","_", fn).upper()
+rand = "".join(random.sample(string.ascii_letters+string.digits, 8))
+macro = ("%s_%s" % (name,rand)).upper()
+snip.rv = f"#ifndef {macro}\n#define {macro}\n\n{snip.v.text}\n#endif /* end of include guard {macro} */"
+`
 endsnippet
 
 snippet ns "namespace"
