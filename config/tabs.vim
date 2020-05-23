@@ -1,45 +1,37 @@
 let g:n_which_key_map_ctrl.n = 'next-tab'
 let g:n_which_key_map_ctrl.p = 'prev-tab'
-let g:n_which_key_map_ctrl.0 = 'which_key_ignore'
-let g:n_which_key_map_ctrl.1 = 'which_key_ignore'
-let g:n_which_key_map_ctrl.2 = 'which_key_ignore'
-let g:n_which_key_map_ctrl.3 = 'which_key_ignore'
-let g:n_which_key_map_ctrl.4 = 'which_key_ignore'
-let g:n_which_key_map_ctrl.5 = 'which_key_ignore'
-let g:n_which_key_map_ctrl.6 = 'which_key_ignore'
-let g:n_which_key_map_ctrl.7 = 'which_key_ignore'
-let g:n_which_key_map_ctrl.8 = 'which_key_ignore'
-let g:n_which_key_map_ctrl.9 = 'which_key_ignore'
 
 " Next/previous tab
 nnoremap <c-space>n gt
 nnoremap <c-space>p gT
 
 " Navigate tabs
-nnoremap <c-space>1 1gt
-nnoremap <c-space>2 2gt
-nnoremap <c-space>3 3gt
-nnoremap <c-space>4 4gt
-nnoremap <c-space>5 5gt
-nnoremap <c-space>6 6gt
-nnoremap <c-space>7 7gt
-nnoremap <c-space>8 8gt
-nnoremap <c-space>9 9gt
+nnoremap <c-0> 99gt
+nnoremap <c-1> 1gt
+nnoremap <c-2> 2gt
+nnoremap <c-3> 3gt
+nnoremap <c-4> 4gt
+nnoremap <c-5> 5gt
+nnoremap <c-6> 6gt
+nnoremap <c-7> 7gt
+nnoremap <c-8> 8gt
+nnoremap <c-9> 9gt
 
 " Next/previous tab
 tnoremap <c-space>n <c-\><c-n>gt
 tnoremap <c-space>p <c-\><c-n>gT
 
 " Navigate tabs
-tnoremap <c-space>1 <c-\><c-n>1gt
-tnoremap <c-space>2 <c-\><c-n>2gt
-tnoremap <c-space>3 <c-\><c-n>3gt
-tnoremap <c-space>4 <c-\><c-n>4gt
-tnoremap <c-space>5 <c-\><c-n>5gt
-tnoremap <c-space>6 <c-\><c-n>6gt
-tnoremap <c-space>7 <c-\><c-n>7gt
-tnoremap <c-space>8 <c-\><c-n>8gt
-tnoremap <c-space>9 <c-\><c-n>9gt
+tnoremap <c-0> <c-\><c-n>99gt
+tnoremap <c-1> <c-\><c-n>1gt
+tnoremap <c-2> <c-\><c-n>2gt
+tnoremap <c-3> <c-\><c-n>3gt
+tnoremap <c-4> <c-\><c-n>4gt
+tnoremap <c-5> <c-\><c-n>5gt
+tnoremap <c-6> <c-\><c-n>6gt
+tnoremap <c-7> <c-\><c-n>7gt
+tnoremap <c-8> <c-\><c-n>8gt
+tnoremap <c-9> <c-\><c-n>9gt
 
 function! Tab_move(n)
   try

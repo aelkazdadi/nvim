@@ -23,7 +23,7 @@ xnoremap <m-tab> <F13>
 cnoremap <m-tab> <space><bs>
 tnoremap <m-tab> <c-\><c-n>i
 
-let &guifont='FiraCode Nerd Font:h12'
+let &guifont='Hack Nerd Font:h12'
 let g:neovide_cursor_vfx_mode = "ripple"
 
 set mouse=n               " Disable mouse support
@@ -45,7 +45,6 @@ set hidden                " Buffers don't need to attach to a window
 set gdefault              " Global substitution by default
 set inccommand=split      " Live substitution
 set foldlevel=99          " Unfold by default
-set ignorecase smartcase  " Smartcase in search/substitution
 set cmdheight=2           " 2 line command line
 set updatetime=100
 set timeout timeoutlen=500
@@ -389,9 +388,9 @@ let g:n_which_key_map.q = {}
 let g:n_which_key_map.q.name = '+vim'
 
 nnoremap <silent> <leader>qq
-      \ :echon 'Quit? (y/n): ' <bar>
+      \ :echon 'Quit? (press y to confirm): ' <bar>
       \ if tolower(nr2char(getchar())) == 'y' <bar>
-      \ qa <bar> else <bar> echo '' <bar> endif<cr>
+      \ bufdo bd <bar> qa <bar> else <bar> echo '' <bar> endif<cr>
 nnoremap <silent> <leader>qe :execute 'lcd ' . g:config_dir . '<bar> edit init.vim'<cr>
 nnoremap <silent> <leader>qf :execute 'Files ' . g:config_dir<cr>
 let g:n_which_key_map.q.q = 'quit'
