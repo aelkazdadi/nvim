@@ -45,7 +45,8 @@ endfunction
 function s:ScrollOffCall()
   if &buftype ==# 'terminal'
     set scrolloff=0
-    set notimeout
+    " TODO: what is this for?
+    " set notimeout
   elseif &buftype ==# 'help'
     set scrolloff=999
     set timeout

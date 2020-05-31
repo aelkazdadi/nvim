@@ -1,5 +1,6 @@
-let g:n_which_key_map_ctrl.n = 'next-tab'
-let g:n_which_key_map_ctrl.p = 'prev-tab'
+let g:n_which_key_map_ctrl['<C-Space>'] = { 'name': '+'}
+let g:n_which_key_map_ctrl['<C-Space>'].n = 'next-tab'
+let g:n_which_key_map_ctrl['<C-Space>'].p = 'prev-tab'
 
 " Next/previous tab
 nnoremap <c-space>n gt

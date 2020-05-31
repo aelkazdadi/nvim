@@ -52,7 +52,7 @@ endfunction
 
 function s:TermEnter()
   nnoremap <buffer> <cr> a
-  let g:n_which_key_map_ctrl['<C-Space>'] = 'disable-highlight'
+  let g:n_which_key_map_ctrl['<C-Space>']['<C-Space>'] = 'disable-highlight'
   nnoremap <buffer><silent> <c-space><c-space> :nohlsearch<cr>
   nnoremap <buffer><silent> <m-cr> a
   DisableWhitespace
@@ -62,7 +62,8 @@ augroup TermGroup
   autocmd!
   autocmd TermOpen * call s:TermOpenCall(expand('<abuf>'))
   autocmd WinEnter,BufEnter term://* call s:TermEnter()
-  autocmd WinLeave,BufLeave term://* echo | let g:n_which_key_map_ctrl['<C-Space>'] = 'term-current-split'
+  autocmd WinLeave,BufLeave term://* echo |
+        \let g:n_which_key_map_ctrl['<C-Space>']['<C-Space>'] = 'term-current-split'
 augroup end
 
 augroup FzfGroup

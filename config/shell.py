@@ -22,6 +22,11 @@ def main(cmd, args):
     if cmd == "reset":
         nvim.command("terminal")
         nvim.command("startinsert")
+    if cmd == "command-with-n-args":
+        n_args = int(args[0])
+        nvim.command(" ".join(args[1:1+n_args]))
+    if cmd == "command-with-all-args":
+        nvim.command(" ".join(args))
 
 
 main(argv[1], argv[2:])

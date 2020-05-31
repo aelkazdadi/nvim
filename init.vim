@@ -105,7 +105,6 @@ Plug 'lervag/vimtex'
 Plug 'simeji/winresizer'
 Plug 'junegunn/fzf', { 'dir': '~/.local/share/fzf', 'do': './install --all --no-update-rc' }
 Plug 'junegunn/fzf.vim'
-Plug 'machakann/vim-highlightedyank'
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 Plug 'easymotion/vim-easymotion'
@@ -140,6 +139,7 @@ let g:Hexokinase_highlighters = [
 
 " Indent guides
 let g:indentLine_char = '¦'
+let g:indentLine_indentLevel = 100
 let g:indent_blankline_char = '¦'
 
 "Gruvbox
@@ -178,10 +178,9 @@ augroup SuperTabConfig
 augroup end
 
 " Highlight yanked text
-let g:highlightedyank_highlight_duration = 300
-
-" Highlight yanked text
-let g:highlightedyank_highlight_duration = 300
+augroup highlight_yank
+  autocmd! TextYankPost * silent! lua require'vim.highlight'.on_yank("IncSearch", 300)
+augroup end
 
 " Quick Scope
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
@@ -332,16 +331,18 @@ augroup end
 cnoreabbrev h tab help
 cnoreabbrev hh help
 
-" Windows
-let g:n_which_key_map_ctrl['.'] = 'window-resizer'
-let g:n_which_key_map_ctrl.d = 'close-window'
-let g:n_which_key_map_ctrl.d = 'close-buffer+window'
-let g:n_which_key_map_ctrl['='] = 'balance-splits'
-let g:n_which_key_map_ctrl['<C-Space>'] = 'term-current-split'
-let g:n_which_key_map_ctrl.s = 'term-split-horizontal'
-let g:n_which_key_map_ctrl.v = 'term-split-vertical'
-let g:n_which_key_map_ctrl.t = 'term-new-tab'
-let g:n_which_key_map_ctrl.o = 'maximize-window'
+" vim-which-key bug workaround
+let g:n_which_key_map_ctrl['<C-Space>']['<C-Space>'] = "terminal"
+let g:n_which_key_map_ctrl['<C-Space>']['.'] = 'window-resizer'
+let g:n_which_key_map_ctrl['<C-Space>'].d = 'close-window'
+let g:n_which_key_map_ctrl['<C-Space>'].D = 'close-tab'
+let g:n_which_key_map_ctrl['<C-Space>'].q = 'close-buffer'
+let g:n_which_key_map_ctrl['<C-Space>'].Q = 'close-buffer'
+let g:n_which_key_map_ctrl['<C-Space>']['='] = 'balance-splits'
+let g:n_which_key_map_ctrl['<C-Space>'].s = 'term-split-horizontal'
+let g:n_which_key_map_ctrl['<C-Space>'].v = 'term-split-vertical'
+let g:n_which_key_map_ctrl['<C-Space>'].t = 'term-new-tab'
+let g:n_which_key_map_ctrl['<C-Space>'].o = 'maximize-window'
 
 nnoremap <silent> <c-space>d :close<cr>
 nnoremap <silent> <c-space>D :tabclose<cr>
@@ -390,9 +391,17 @@ let g:n_which_key_map.q.name = '+vim'
 nnoremap <silent> <leader>qq
       \ :echon 'Quit? (press y to confirm): ' <bar>
       \ if tolower(nr2char(getchar())) == 'y' <bar>
-      \ bufdo bd <bar> qa <bar> else <bar> echo '' <bar> endif<cr>
+      \ execute 'bufdo bd' <bar> qa <bar>
+      \ else <bar> echo ''
+      \ <bar> endif<cr>
 nnoremap <silent> <leader>qe :execute 'lcd ' . g:config_dir . '<bar> edit init.vim'<cr>
 nnoremap <silent> <leader>qf :execute 'Files ' . g:config_dir<cr>
 let g:n_which_key_map.q.q = 'quit'
 let g:n_which_key_map.q.e = 'init-file'
 let g:n_which_key_map.q.f = 'config-files'
+
+" c++ template implementation file
+augroup Tpp_extenstion
+  autocmd!
+  autocmd BufRead,BufNewFile *.tpp setlocal filetype=cpp
+augroup end
