@@ -130,6 +130,18 @@ snippet iter "$1.begin(), $1.end() (beginend)"
 ${1:${VISUAL}}.begin(), $1.end()
 endsnippet
 
-snippet nolint "Disable clang-tidy" i
+snippet nol "Disable clang-tidy" i
+// NOLINT
+endsnippet
+
+snippet noll "Disable clang-tidy" i
 /* NOLINT */
+endsnippet
+
+snippet req "SFINAE Constraint"
+typename std::enable_if<$1, ${VISUAL}>::type$0
+endsnippet
+
+snippet pred "SFINAE Constraint"
+$1<${VISUAL}>::value$0
 endsnippet
