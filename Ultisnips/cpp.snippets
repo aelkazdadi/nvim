@@ -95,13 +95,13 @@ sizeof(${0:${VISUAL}})
 endsnippet
 
 snippet mainn "main (no args)" b
-int main() {
+auto main() -> int {
 	$0
 }
 endsnippet
 
 snippet main "main" b
-int main(int argc, char *argv[]) {
+auto main(int argc, char *argv[]) -> int {
 	$0
 }
 endsnippet
@@ -129,6 +129,11 @@ endsnippet
 snippet iter "$1.begin(), $1.end() (beginend)"
 ${1:${VISUAL}}.begin(), $1.end()
 endsnippet
+
+snippet nd "nodiscard attribute"
+[[nodiscard]] 
+endsnippet
+
 
 snippet nol "Disable clang-tidy" i
 // NOLINT
