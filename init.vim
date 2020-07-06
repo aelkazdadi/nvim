@@ -141,6 +141,8 @@ let g:Hexokinase_highlighters = [
 let g:indentLine_char = '¦'
 let g:indentLine_indentLevel = 100
 let g:indent_blankline_char = '¦'
+let g:indent_blankline_filetype_exclude = ['tex']
+let g:indentLine_fileTypeExclude = ['tex']
 
 "Gruvbox
 let g:gruvbox_italic = 1
