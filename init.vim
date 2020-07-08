@@ -29,16 +29,15 @@ let g:neovide_cursor_vfx_mode = "ripple"
 set mouse=n               " Disable mouse support
 set expandtab             " Expand TABs to spaces
 
-set tabstop=4             " The width of a TAB is set to 4.
+set tabstop=2             " The width of a TAB is set to 2.
 
-set shiftwidth=2          " Indents will have a width of 4
+set shiftwidth=2          " Indents will have a width of 2
 
 set softtabstop=2         " Sets the number of columns for a TAB
 
 set number                " Show line numbers
 set relativenumber        " Show line numbers
 set lazyredraw            " Don't redraw the screen during commands/macros
-set expandtab             " Expand TABs to spaces
 set scrolloff=5           " Scrolloff
 set formatoptions-=t      " Disable hard line wrapping
 set hidden                " Buffers don't need to attach to a window

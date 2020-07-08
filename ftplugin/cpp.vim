@@ -23,8 +23,8 @@ function! Compile_asm(line)
     return
   endif
   let compiler = split(a:line)[1]
-  if compiler != "gcc" && compiler != "clang" &&
-        \ compiler != "g++" && compiler != "clang++""
+  let compiler_list = ["gcc", "clang", "cc", "g++", "clang++", "c++"]
+  if index(compiler_list, compiler) == -1
     return
   endif
   let file_path = expand("%:p")
